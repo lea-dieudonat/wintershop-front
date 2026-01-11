@@ -69,12 +69,6 @@ export interface OrderListItem {
   itemCount: number;
 }
 
-// Réponse API pour la liste
-export interface OrdersListResponse {
-  'hydra:member': OrderListItem[];
-  'hydra:totalItems': number;
-}
-
 // Demande de remboursement
 export interface CreateRefundRequest {
   reason: string;

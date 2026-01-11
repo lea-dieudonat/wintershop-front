@@ -20,7 +20,7 @@ export const OrdersPage = () => {
     );
   }
 
-  const orders = data?.["hydra:member"] || [];
+  const orders = data?.items || [];
 
   return (
     <div className="container mx-auto p-4 py-8">

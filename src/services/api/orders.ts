@@ -1,11 +1,12 @@
 import { apiClient } from '../api/client';
-import type { Order, OrdersListResponse, CreateRefundRequest } from '../../types/order';
+import type { Order, OrderListItem, CreateRefundRequest } from '../../types/order';
+import { normalizeCollection, type CollectionPayload } from '../../lib/api-helpers';
 
 export const ordersApi = {
     // Récupérer la liste des commandes
-    getOrders: async (): Promise<OrdersListResponse> => {
-        const response = await apiClient.get<OrdersListResponse>('/orders');
-        return response.data;
+    getOrders: async () => {
+        const response = await apiClient.get<CollectionPayload<OrderListItem>>('/orders');
+        return normalizeCollection(response.data);
     },
     
     // Récupérer les détails d'une commande
