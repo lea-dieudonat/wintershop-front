@@ -1,5 +1,5 @@
-import { apiClient } from '../api/client';
-import type { Order, OrderListItem, CreateRefundRequest } from '../../types/order';
+import { apiClient } from './clientApi';
+import type { Order, OrderListItem, CreateRefundRequest } from '../../types/orderTypes';
 import { normalizeCollection, type CollectionPayload } from '../../lib/api-helpers';
 
 export const ordersApi = {

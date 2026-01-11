@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { useAuth } from "../hooks/useAuth";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { ROUTES } from "../router/routes";
 
 export const LoginPage = () => {
@@ -12,6 +12,8 @@ export const LoginPage = () => {
 
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || ROUTES.HOME;
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -20,7 +22,7 @@ export const LoginPage = () => {
 
     try {
       await login({ email, password });
-      navigate(ROUTES.HOME);
+      navigate(from, { replace: true });
     } catch (err) {
       setError("Failed to login. Please check your credentials and try again.");
       console.error("Login error:", err);

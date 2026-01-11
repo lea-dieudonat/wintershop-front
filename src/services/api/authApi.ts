@@ -1,9 +1,13 @@
-import { apiClient } from "./client";
-import type { LoginCredentials, AuthResponse } from "../../types/auth";
+import { apiClient } from "./clientApi";
+import type { LoginCredentials, AuthResponse, User } from "../../types/authTypes";
 
 export const authApi = {
     login: async (credentials: LoginCredentials): Promise<AuthResponse> => {
         const response = await apiClient.post<AuthResponse>("/login", credentials);
+        return response.data;
+    },
+    getMe: async (): Promise<User> => {
+        const response = await apiClient.get<User>("/me");
         return response.data;
     },
     // Logout (uniquement côté frontend, JWT est stateless)

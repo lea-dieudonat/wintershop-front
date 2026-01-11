@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { OrderStatusBadge } from "../../components/ui/OrderStatusBadge";
 import { formatPrice, formatDate } from "../../utils/formatters";
 import { ROUTES } from "../../router/routes";
-import type { OrderListItem } from "../../types/order";
+import type { OrderListItem } from "../../types/orderTypes";
 
 interface OrderCardProps {
   order: OrderListItem;

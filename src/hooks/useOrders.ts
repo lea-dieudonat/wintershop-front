@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { ordersApi } from '../services/api/orders';
-import type { CreateRefundRequest } from '../types/order';
+import { ordersApi } from '../services/api/ordersApi';
+import type { CreateRefundRequest } from '../types/orderTypes';
 
 // Liste des commandes
 export const useOrders = () => {

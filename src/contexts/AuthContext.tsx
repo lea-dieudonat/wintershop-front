@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { authApi } from "../services/api/auth";
-import type { User, AuthState, LoginCredentials } from "../types/auth";
+import { authApi } from "../services/api/authApi";
+import type { User, AuthState, LoginCredentials } from "../types/authTypes";
 import { AuthContext } from "./Auth";
 
 // Fonction helper pour récupérer l'état initial depuis le localStorage
@@ -39,14 +39,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     // Stocker le token
     localStorage.setItem("token", token);
 
-    // TODO: Récupérer les infos utilisateur depuis une API dédiée
-    const user: User = {
-      id: 1,
-      email: credentials.email,
-      firstName: "John",
-      lastName: "Doe",
-      roles: ["USER"],
-    };
+    // Récupérer les infos utilisateur depuis une API dédiée
+    const user = await authApi.getMe();
     localStorage.setItem("user", JSON.stringify(user));
 
     setState({

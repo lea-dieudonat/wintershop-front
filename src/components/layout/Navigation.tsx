@@ -47,12 +47,14 @@ export const Navigation = () => {
             <div className="flex items-center space-x-4">
               {isAuthenticated ? (
                 <>
-                  <span className="text-sm text-gray-300">{user?.email}</span>
+                  <span className="text-sm text-gray-300">
+                    {user?.firstName} {user?.lastName}
+                  </span>
                   <button
                     onClick={logout}
                     className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded transition-colors"
                   >
-                    Déconnexion
+                    Logout
                   </button>
                 </>
               ) : (
@@ -60,7 +62,7 @@ export const Navigation = () => {
                   to={ROUTES.LOGIN}
                   className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition-colors"
                 >
-                  Connexion
+                  Login
                 </Link>
               )}
             </div>

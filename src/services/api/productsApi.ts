@@ -1,5 +1,5 @@
-import { apiClient } from './client';
-import type { ProductsResponse } from '../../types/product';
+import { apiClient } from './clientApi';
+import type { ProductsResponse } from '../../types/productTypes';
 
 export const productsApi = {
     getAll: async (): Promise<ProductsResponse> => {
