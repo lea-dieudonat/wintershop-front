@@ -1,11 +1,13 @@
 import { OrderCard } from "./OrderCard";
 import type { OrderListItem } from "../../types/orderTypes";
+import { useTranslate } from "@tolgee/react";
 
 interface OrderListProps {
   orders: OrderListItem[];
 }
 
 export const OrderList = ({ orders }: OrderListProps) => {
+  const { t } = useTranslate();
   // Si pas de commandes
   if (orders.length === 0) {
     return (
@@ -26,12 +28,9 @@ export const OrderList = ({ orders }: OrderListProps) => {
           </svg>
         </div>
         <h3 className="text-lg font-medium text-gray-900 mb-2">
-          No Orders Found
+          {t("orders.noOrders")}
         </h3>
-        <p className="text-gray-500">
-          You have not placed any orders yet. Start shopping to see your orders
-          here.
-        </p>
+        <p className="text-gray-500">{t("orders.noOrdersDescription")}</p>
       </div>
     );
   }

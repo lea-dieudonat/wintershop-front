@@ -1,11 +1,14 @@
 import { formatPrice } from "../../utils/formatters";
 import type { Product } from "../../types/productTypes";
+import { useTranslate } from "@tolgee/react";
 
 interface ProductCardProps {
   product: Product;
 }
 
 export const ProductCard = ({ product }: ProductCardProps) => {
+  const { t } = useTranslate();
+
   return (
     <div className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
       <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
@@ -15,11 +18,13 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <span className="text-2xl font-bold text-blue-600">
           {formatPrice(product.price)}
         </span>
-        <span className="text-sm text-gray-500">Stock: {product.stock}</span>
+        <span className="text-sm text-gray-500">
+          {t("stock")}: {product.stock}
+        </span>
       </div>
 
       <p className="text-sm text-gray-500 mt-2">
-        Catégorie: {product.category.name}
+        {t("category")}: {product.category.name}
       </p>
     </div>
   );

@@ -1,0 +1,102 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "back": "Back",
+    "close": "Close",
+    "email": {
+      "label": "Email",
+      "placeholder": "Email address"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Password"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "orders": "My Orders",
+    "cart": "Cart",
+    "profile": "Profile",
+    "logout": "Logout",
+    "login": "Login"
+  },
+  "home": {
+    "title": "Welcome to WinterShop",
+    "description": "Your one-stop shop for all your winter sports needs. Explore our wide range of products and gear up for your next adventure!",
+    "shopNow": "Shop Now",
+    "viewOrders": "View Orders",
+    "features": {
+      "ski": {
+        "title": "Ski selection",
+        "description": "Find the perfect skis for your style and skill level."
+      },
+        "winterGear": {
+        "title": "Winter Gear",
+        "description": "Stay warm and stylish with our range of winter clothing and accessories."
+      },
+      "snowboard": {
+        "title": "Snowboard collection",
+        "description": "Discover our latest snowboards for all skill levels."
+      }
+    }
+  },
+  "login": {
+    "title": "Login to WinterShop",
+    "description": "Access your account to manage your orders and settings.",
+    "loggingIn": "Logging in...",
+    "login": "Login",
+    "back": "Back to Home",
+    "testCredentials": "Test credentials:"
+  },
+  "products": {
+    "title": "Product List",
+    "noProducts": "No products available",
+    "price": "Price",
+    "addToCart": "Add to Cart",
+    "viewDetails": "View Details",
+    "total": "Total Products: {count}",
+    "category": {
+      "skis": "Skis",
+      "snowboards": "Snowboards",
+      "boots": "Boots",
+      "bindings": "Bindings",
+      "poles": "Poles",
+      "helmets": "Helmets",
+      "goggles": "Goggles",
+      "gloves": "Gloves",
+      "clothing": "Clothing",
+      "accessories": "Accessories"
+    }
+  },
+  "orders": {
+    "title": "My Orders",
+    "description": "Review your past orders and their statuses.",
+    "noOrders": "No Orders Found",
+    "noOrdersDescription": "You have not placed any orders yet. Start shopping to see your orders here.",
+    "reference": "Order #{number}",
+    "date": "Date",
+    "total": "Total",
+    "status": {
+      "pending": "Pending",
+      "paid": "Paid",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "refund_requested": "Refund Requested",
+      "refunded": "Refunded"
+    },
+    "viewDetails": "View Details"
+  },
+  "errors": {
+    "networkError": "Connection error. Please check your internet connection.",
+    "serverError": "Server error. Please try again later.",
+    "notFound": "Resource not found",
+    "unauthorized": "You must be logged in to access this page",
+    "loadProducts": "Unable to load products",
+    "loadOrders": "Unable to load your orders"
+  }
+}

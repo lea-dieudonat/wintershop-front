@@ -1,0 +1,94 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "back": "Retour",
+    "close": "Fermer"
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "orders": "Mes commandes",
+    "cart": "Panier",
+    "profile": "Profil",
+    "logout": "Se déconnecter",
+    "login": "Se connecter"
+  },
+  "home": {
+    "title": "Bienvenue chez WinterShop",
+    "description": "Votre boutique unique pour tous vos besoins en sports d'hiver. Découvrez notre large gamme de produits et préparez-vous pour votre prochaine aventure !",
+    "shopNow": "Acheter maintenant",
+    "viewOrders": "Voir les commandes",
+    "features": {
+      "ski": {
+        "title": "Sélection de skis",
+        "description": "Trouvez les skis parfaits pour votre style et votre niveau."
+      },
+      "winterGear": {
+        "title": "Équipement d'hiver",
+        "description": "Restez au chaud et élégant avec notre gamme de vêtements et accessoires d'hiver."
+      },
+      "snowboard": {
+        "title": "Collection de snowboards",
+        "description": "Découvrez nos derniers snowboards pour tous les niveaux."
+      }
+    }
+  },
+  "login": {
+    "title": "Connexion à WinterShop",
+    "description": "Accédez à votre compte pour gérer vos commandes et paramètres.",
+    "loggingIn": "Connexion en cours...",
+    "login": "Se connecter",
+    "back": "Retour à l'accueil",
+    "testCredentials": "Identifiants de test :"
+    },
+  "products": {
+    "title": "Liste des produits",
+    "noProducts": "Aucun produit disponible",
+    "price": "Prix",
+    "addToCart": "Ajouter au panier",
+    "viewDetails": "Voir les détails",
+    "total": "Total des produits : {count}",
+    "category": {
+      "skis": "Skis",
+      "snowboards": "Snowboards",
+      "boots": "Chaussures",
+      "bindings": "Fixations",
+      "poles": "Bâtons",
+      "helmets": "Casques",
+      "goggles": "Masques",
+      "gloves": "Gants",
+      "clothing": "Vêtements",
+      "accessories": "Accessoires"
+    }
+  },
+  "orders": {
+    "title": "Mes commandes",
+    "description": "Consultez vos commandes passées et leurs statuts.",
+    "noOrders": "Aucune commande trouvée",
+    "noOrdersDescription": "Vous n'avez pas encore passé de commande. Commencez vos achats pour voir vos commandes ici.",
+    "reference": "Commande n°{number}",
+    "date": "Date",
+    "total": "Total",
+    "status": {
+      "pending": "En attente",
+      "paid": "Payée",
+      "processing": "En préparation",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée",
+      "refund_requested": "Remboursement demandé",
+      "refunded": "Remboursée"
+    },
+    "viewDetails": "Voir les détails"
+  },
+  "errors": {
+    "networkError": "Erreur de connexion. Veuillez vérifier votre connexion internet.",
+    "serverError": "Erreur serveur. Veuillez réessayer plus tard.",
+    "notFound": "Ressource non trouvée",
+    "unauthorized": "Vous devez être connecté pour accéder à cette page",
+    "loadProducts": "Impossible de charger les produits",
+    "loadOrders": "Impossible de charger vos commandes"
+  }
+}

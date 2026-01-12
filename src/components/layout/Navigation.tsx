@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../router/routes";
 import { useAuth } from "../../hooks/useAuth";
+import { useTranslate } from "@tolgee/react";
 
 export const Navigation = () => {
   const { isAuthenticated, user, logout } = useAuth();
+  const { t } = useTranslate();
   return (
     <nav className="bg-gray-800 text-white">
       <div className="container mx-auto px-4">
@@ -19,13 +21,13 @@ export const Navigation = () => {
               to={ROUTES.PRODUCTS}
               className="hover:text-blue-400 transition-colors"
             >
-              Products
+              {t("nav.products")}
             </Link>
             <Link
               to={ROUTES.ORDERS}
               className="hover:text-blue-400 transition-colors"
             >
-              Orders
+              {t("nav.orders")}
             </Link>
             {/* Liens secondaires */}
             <div className="flex space-x-4">
@@ -33,13 +35,13 @@ export const Navigation = () => {
                 to={ROUTES.CART}
                 className="hover:text-blue-400 transition-colors"
               >
-                🛒 Cart
+                🛒 {t("nav.cart")}
               </Link>
               <Link
                 to={ROUTES.PROFILE}
                 className="hover:text-blue-400 transition-colors"
               >
-                👤 Profile
+                👤 {t("nav.profile")}
               </Link>
             </div>
 
@@ -54,7 +56,7 @@ export const Navigation = () => {
                     onClick={logout}
                     className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded transition-colors"
                   >
-                    Logout
+                    {t("nav.logout")}
                   </button>
                 </>
               ) : (
@@ -62,7 +64,7 @@ export const Navigation = () => {
                   to={ROUTES.LOGIN}
                   className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition-colors"
                 >
-                  Login
+                  {t("nav.login")}
                 </Link>
               )}
             </div>

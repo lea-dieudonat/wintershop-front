@@ -3,8 +3,10 @@ import type { FormEvent } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { ROUTES } from "../router/routes";
+import { useTranslate } from "@tolgee/react";
 
 export const LoginPage = () => {
+  const { t } = useTranslate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -37,10 +39,10 @@ export const LoginPage = () => {
         {/* Header */}
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Connexion to WinterShop
+            {t("login.title")}
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            Access your account to manage your orders and settings.
+            {t("login.description")}
           </p>
         </div>
         {/* Form */}
@@ -49,7 +51,7 @@ export const LoginPage = () => {
             {/* Email */}
             <div>
               <label htmlFor="email" className="sr-only">
-                Email
+                {t("common.email.label")}
               </label>
               <input
                 id="email"
@@ -58,7 +60,7 @@ export const LoginPage = () => {
                 autoComplete="email"
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Email address"
+                placeholder={t("common.email.placeholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -66,7 +68,7 @@ export const LoginPage = () => {
             {/* Password */}
             <div>
               <label htmlFor="password" className="sr-only">
-                Password
+                {t("common.password.label")}
               </label>
               <input
                 id="password"
@@ -75,7 +77,7 @@ export const LoginPage = () => {
                 autoComplete="current-password"
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Password"
+                placeholder={t("common.password.placeholder")}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -94,7 +96,7 @@ export const LoginPage = () => {
 
           {/* Help */}
           <div className="text-sm text-center text-gray-600">
-            <p className="mb-2">Identifiants de test :</p>
+            <p className="mb-2">{t("login.testCredentials")}</p>
             <p className="font-mono bg-gray-100 p-2 rounded">
               test@wintershop.com / password123
             </p>
@@ -107,7 +109,7 @@ export const LoginPage = () => {
               disabled={loading}
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? "Logging in..." : "Login"}
+              {loading ? t("login.loggingIn") : t("login.login")}
             </button>
           </div>
 
@@ -117,7 +119,7 @@ export const LoginPage = () => {
               to={ROUTES.HOME}
               className="text-indigo-600 hover:text-indigo-500 text-sm font-medium"
             >
-              Back to Home
+              {t("login.back")}
             </Link>
           </div>
         </form>

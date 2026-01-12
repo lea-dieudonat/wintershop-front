@@ -3,12 +3,14 @@ import { OrderStatusBadge } from "../../components/ui/OrderStatusBadge";
 import { formatPrice, formatDate } from "../../utils/formatters";
 import { ROUTES } from "../../router/routes";
 import type { OrderListItem } from "../../types/orderTypes";
+import { useTranslate } from "@tolgee/react";
 
 interface OrderCardProps {
   order: OrderListItem;
 }
 
 export const OrderCard = ({ order }: OrderCardProps) => {
+  const { t } = useTranslate();
   return (
     <Link
       to={`${ROUTES.ORDERS}/${order.id}`}
@@ -18,7 +20,7 @@ export const OrderCard = ({ order }: OrderCardProps) => {
       <div className="flex justify-between items-start mb-4">
         <div>
           <h3 className="text-lg font-semibold text-gray-900">
-            Order #{order.reference}
+            {t("orders.reference", { number: order.reference })}
           </h3>
           <p className="text-sm text-gray-600 mt-1">
             {formatDate(order.createdAt)}
@@ -30,11 +32,11 @@ export const OrderCard = ({ order }: OrderCardProps) => {
       {/* Informations principales */}
       <div className="space-y-2">
         <div className="flex justify-between items-center">
-          <span className="text-gray-700">Articles:</span>
+          <span className="text-gray-700">{t("orders.items")}:</span>
           <span className="font-medium">{order.itemCount}</span>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-gray-700">Total:</span>
+          <span className="text-gray-700">{t("orders.total")}:</span>
           <span className="text-xl font-bold text-blue-600">
             {formatPrice(order.totalAmount)}
           </span>
@@ -42,7 +44,7 @@ export const OrderCard = ({ order }: OrderCardProps) => {
       </div>
       {/* Indicateur visuel de lien */}
       <div className="mt-4 pt-4 border-t flex items-center text-blue-600 text-sm">
-        <span>Voir les détails</span>
+        <span>{t("orders.viewDetails")}</span>
         <svg
           className="w-4 h-4 ml-2"
           fill="none"

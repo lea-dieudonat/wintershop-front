@@ -1,4 +1,5 @@
 import type { OrderStatus } from "../../types/orderTypes";
+import { useTranslate } from "@tolgee/react";
 
 interface OrderStatusBadgeProps {
   status: OrderStatus;
@@ -29,29 +30,15 @@ const getStatusStyles = (status: OrderStatus) => {
   }
 };
 
-const getStatusLabel = (status: OrderStatus): string => {
-  const labels: Record<OrderStatus, string> = {
-    pending: "Pending",
-    paid: "Paid",
-    confirmed: "Confirmed",
-    processing: "Processing",
-    shipped: "Shipped",
-    delivered: "Delivered",
-    cancelled: "Cancelled",
-    refund_requested: "Refund Requested",
-    refunded: "Refunded",
-  };
-  return labels[status];
-};
-
 export const OrderStatusBadge = ({ status }: OrderStatusBadgeProps) => {
+  const { t } = useTranslate();
   return (
     <span
       className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusStyles(
         status
       )}`}
     >
-      {getStatusLabel(status)}
+      {t(`orders.status.${status}`)}
     </span>
   );
 };
