@@ -1,4 +1,5 @@
 import { formatPrice } from "../../utils/formatters";
+import { getProductTranslation } from "../../utils/translationHelper";
 import type { Product } from "../../types/productTypes";
 import { useTranslate, useTolgee } from "@tolgee/react";
 
@@ -10,11 +11,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const { t } = useTranslate();
   const tolgee = useTolgee(["language"]);
   const currentLanguage = tolgee.getLanguage();
+  const { name, description } = getProductTranslation(product, currentLanguage);
 
   return (
     <div className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
-      <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-      <p className="text-gray-700 mb-4">{product.description}</p>
+      <h2 className="text-xl font-semibold mb-2">{name}</h2>
+      <p className="text-gray-700 mb-4">{description}</p>
 
       <div className="flex justify-between items-center">
         <span className="text-2xl font-bold text-blue-600">
