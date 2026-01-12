@@ -1,11 +1,14 @@
 // Types pour les statuts (au lieu d'enums)
 export type OrderStatus = 
   | 'pending'
+  | 'paid'
   | 'confirmed'
   | 'processing'
   | 'shipped'
   | 'delivered'
-  | 'cancelled';
+  | 'cancelled'
+  | 'refund_requested'
+  | 'refunded';
 
 export type RefundStatus = 
   | 'requested'

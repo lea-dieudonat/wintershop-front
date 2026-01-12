@@ -8,6 +8,8 @@ const getStatusStyles = (status: OrderStatus) => {
   switch (status) {
     case "pending":
       return "bg-yellow-100 text-yellow-800";
+    case "paid":
+      return "bg-emerald-100 text-emerald-800";
     case "confirmed":
       return "bg-blue-100 text-blue-800";
     case "processing":
@@ -18,6 +20,10 @@ const getStatusStyles = (status: OrderStatus) => {
       return "bg-green-100 text-green-800";
     case "cancelled":
       return "bg-red-100 text-red-800";
+    case "refund_requested":
+      return "bg-orange-100 text-orange-800";
+    case "refunded":
+      return "bg-teal-100 text-teal-800";
     default:
       return "bg-gray-100 text-gray-800";
   }
@@ -26,11 +32,14 @@ const getStatusStyles = (status: OrderStatus) => {
 const getStatusLabel = (status: OrderStatus): string => {
   const labels: Record<OrderStatus, string> = {
     pending: "Pending",
+    paid: "Paid",
     confirmed: "Confirmed",
     processing: "Processing",
     shipped: "Shipped",
     delivered: "Delivered",
     cancelled: "Cancelled",
+    refund_requested: "Refund Requested",
+    refunded: "Refunded",
   };
   return labels[status];
 };
