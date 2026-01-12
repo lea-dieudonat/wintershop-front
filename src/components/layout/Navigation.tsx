@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "../../router/routes";
 import { useAuth } from "../../hooks/useAuth";
 import { useTranslate } from "@tolgee/react";
+import { LanguageSelector } from "../ui/LanguageSelector";
 
 export const Navigation = () => {
   const { isAuthenticated, user, logout } = useAuth();
@@ -67,6 +68,7 @@ export const Navigation = () => {
                   {t("nav.login")}
                 </Link>
               )}
+              <LanguageSelector />
             </div>
           </div>
         </div>

@@ -5,6 +5,8 @@
     "retry": "Retry",
     "back": "Back",
     "close": "Close",
+    "category": "Category",
+    "stock": "Stock",
     "email": {
       "label": "Email",
       "placeholder": "Email address"
@@ -78,6 +80,7 @@
     "noOrdersDescription": "You have not placed any orders yet. Start shopping to see your orders here.",
     "reference": "Order #{number}",
     "date": "Date",
+    "items": "Items",
     "total": "Total",
     "status": {
       "pending": "Pending",

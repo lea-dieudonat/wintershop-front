@@ -4,7 +4,17 @@
     "error": "Une erreur est survenue",
     "retry": "Réessayer",
     "back": "Retour",
-    "close": "Fermer"
+    "close": "Fermer",
+    "category": "Catégorie",
+    "stock": "Stock",
+    "email": {
+      "label": "Email",
+      "placeholder": "Adresse email"
+    },
+    "password": {
+      "label": "Mot de passe",
+      "placeholder": "Mot de passe"
+    }
   },
   "nav": {
     "home": "Accueil",
@@ -70,6 +80,7 @@
     "noOrdersDescription": "Vous n'avez pas encore passé de commande. Commencez vos achats pour voir vos commandes ici.",
     "reference": "Commande n°{number}",
     "date": "Date",
+    "items": "Articles",
     "total": "Total",
     "status": {
       "pending": "En attente",

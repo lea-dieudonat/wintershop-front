@@ -4,6 +4,7 @@ import { formatPrice, formatDate } from "../../utils/formatters";
 import { ROUTES } from "../../router/routes";
 import type { OrderListItem } from "../../types/orderTypes";
 import { useTranslate } from "@tolgee/react";
+import { useTolgee } from "@tolgee/react";
 
 interface OrderCardProps {
   order: OrderListItem;
@@ -11,6 +12,9 @@ interface OrderCardProps {
 
 export const OrderCard = ({ order }: OrderCardProps) => {
   const { t } = useTranslate();
+  const tolgee = useTolgee(["language"]);
+  const currentLanguage = tolgee.getLanguage();
+
   return (
     <Link
       to={`${ROUTES.ORDERS}/${order.id}`}
@@ -23,7 +27,7 @@ export const OrderCard = ({ order }: OrderCardProps) => {
             {t("orders.reference", { number: order.reference })}
           </h3>
           <p className="text-sm text-gray-600 mt-1">
-            {formatDate(order.createdAt)}
+            {formatDate(order.createdAt, currentLanguage)}
           </p>
         </div>
         <OrderStatusBadge status={order.status} />
@@ -38,7 +42,7 @@ export const OrderCard = ({ order }: OrderCardProps) => {
         <div className="flex justify-between items-center">
           <span className="text-gray-700">{t("orders.total")}:</span>
           <span className="text-xl font-bold text-blue-600">
-            {formatPrice(order.totalAmount)}
+            {formatPrice(order.totalAmount, currentLanguage)}
           </span>
         </div>
       </div>
