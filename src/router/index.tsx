@@ -3,12 +3,12 @@ import { HomePage } from "../pages/HomePage";
 import { LoginPage } from "../pages/LoginPage";
 import { ProductsPage } from "../pages/ProductsPage";
 import { OrdersPage } from "../pages/OrdersPage";
+import { OrderDetailPage } from "../pages/OrderDetailPage";
 import { ROUTES } from "./routes";
 import { ProtectedRoute } from "../components/auth/ProtectedRoute";
 
 // TODO: Créer ces pages plus tard
 // import { ProductDetailPage } from '../pages/ProductDetailPage';
-// import { OrderDetailPage } from '../pages/OrderDetailPage';
 // import { CartPage } from '../pages/CartPage';
 // import { CheckoutPage } from '../pages/CheckoutPage';
 // import { ProfilePage } from '../pages/ProfilePage';
@@ -30,10 +30,10 @@ export const AppRouter = () => {
           </ProtectedRoute>
         }
       />
+      <Route path={ROUTES.ORDER_DETAILS(":id")} element={<OrderDetailPage />} />
       {/* Routes à implémenter plus tard */}
 
       {/* <Route path={ROUTES.PRODUCT_DETAILS(':id')} element={<ProductDetailPage />} />
-            <Route path={ROUTES.ORDER_DETAILS(':id')} element={<OrderDetailPage />} />
             <Route path={ROUTES.CART} element={<CartPage />} />
             <Route path={ROUTES.CHECKOUT} element={<CheckoutPage />} />
             <Route path={ROUTES.PROFILE} element={<ProfilePage />} />

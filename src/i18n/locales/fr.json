@@ -7,6 +7,7 @@
     "close": "Fermer",
     "category": "Catégorie",
     "stock": "Stock",
+    "createdAt": "Créé le {date}",
     "email": {
       "label": "Email",
       "placeholder": "Adresse email"
@@ -92,7 +93,16 @@
       "refund_requested": "Remboursement demandé",
       "refunded": "Remboursée"
     },
-    "viewDetails": "Voir les détails"
+    "viewDetails": "Voir les détails",
+    "details": {
+      "title": "Produits",
+      "quantity": "Quantité",
+      "billingAddress": "Adresse de facturation",
+      "shippingAddress": "Adresse de livraison",
+      "actions": "Actions",
+      "cancelOrder": "Annuler la commande",
+      "requestRefund": "Demander un remboursement"
+    }
   },
   "errors": {
     "networkError": "Erreur de connexion. Veuillez vérifier votre connexion internet.",

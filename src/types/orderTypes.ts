@@ -22,6 +22,7 @@ export interface OrderItem {
   product: {
     id: number;
     name: string;
+    imageUrl: string;
   };
   quantity: number;
   unitPrice: string;
@@ -45,20 +46,8 @@ export interface Order {
   createdAt: string;
   updatedAt: string;
   items: OrderItem[];
-  shippingAddress: {
-    id: number;
-    street: string;
-    city: string;
-    postalCode: string;
-    country: string;
-  };
-  billingAddress: {
-    id: number;
-    street: string;
-    city: string;
-    postalCode: string;
-    country: string;
-  };
+  shippingAddress: Address;
+  billingAddress: Address;
   refundRequest: RefundRequest | null;
 }
 
@@ -75,4 +64,11 @@ export interface OrderListItem {
 // Demande de remboursement
 export interface CreateRefundRequest {
   reason: string;
+}
+
+export interface Address {
+  street: string;
+  city: string;
+  postalCode: string;
+  country: string;
 }
