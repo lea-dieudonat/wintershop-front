@@ -1,6 +1,8 @@
 {
   "common": {
     "back": "Back",
+    "cancel": "Cancel",
+    "cancelling": "Cancelling...",
     "category": "Category",
     "close": "Close",
     "createdAt": "Created at: {date}",
@@ -15,7 +17,9 @@
       "placeholder": "Password"
     },
     "retry": "Retry",
-    "stock": "Stock"
+    "stock": "Stock",
+    "submit": "Submit",
+    "submitting": "Submitting..."
   },
   "errors": {
     "loadOrders": "Unable to load your orders",
@@ -81,6 +85,17 @@
     "noOrders": "No Orders Found",
     "noOrdersDescription": "You have not placed any orders yet. Start shopping to see your orders here.",
     "reference": "Order #{number}",
+    "refund": {
+      "reasonLabel": "Reason for refund",
+      "reasonPlaceholder": "Enter the reason for your refund request",
+      "reasonRequired": "Please provide a reason for the refund request",
+      "title": "Request a Refund"
+    },
+    "cancel": {
+      "confirm": "Are you sure you want to cancel this order?",
+      "success": "Your order has been successfully cancelled.",
+      "title": "Cancel Order"
+    },
     "status": {
       "cancelled": "Cancelled",
       "delivered": "Delivered",

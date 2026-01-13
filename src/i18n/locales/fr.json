@@ -4,10 +4,14 @@
     "error": "Une erreur est survenue",
     "retry": "Réessayer",
     "back": "Retour",
+    "cancel": "Annuler",
+    "cancelling": "Annulation en cours...",
     "close": "Fermer",
     "category": "Catégorie",
     "stock": "Stock",
     "createdAt": "Créé le {date}",
+    "submit": "Soumettre",
+    "submitting": "Soumission en cours...",
     "email": {
       "label": "Email",
       "placeholder": "Adresse email"
@@ -95,13 +99,28 @@
     },
     "viewDetails": "Voir les détails",
     "details": {
-      "title": "Produits",
+      "title": "Détails de la commande",
       "quantity": "Quantité",
       "billingAddress": "Adresse de facturation",
       "shippingAddress": "Adresse de livraison",
       "actions": "Actions",
       "cancelOrder": "Annuler la commande",
-      "requestRefund": "Demander un remboursement"
+      "requestRefund": "Demander un remboursement",
+      "shipping": "Livraison",
+      "subtotal": "Sous-total",
+      "tax": "Taxe",
+      "unitPrice": "Prix unitaire"
+    },
+    "refund": {
+      "reasonLabel": "Raison du remboursement",
+      "reasonPlaceholder": "Entrez la raison de votre demande de remboursement",
+      "reasonRequired": "Veuillez fournir une raison pour la demande de remboursement",
+      "title": "Demander un remboursement"
+    },
+    "cancel": {
+      "confirm": "Êtes-vous sûr de vouloir annuler cette commande ?",
+      "success": "Votre commande a été annulée avec succès.",
+      "title": "Annuler la commande"
     }
   },
   "errors": {

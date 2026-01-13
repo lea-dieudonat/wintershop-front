@@ -17,13 +17,13 @@ export const ordersApi = {
 
     // Annuler une commande
     cancelOrder: async (orderId: number): Promise<Order> => {
-        const response = await apiClient.post<Order>(`/orders/${orderId}/cancel`);
+        const response = await apiClient.patch<Order>(`/orders/${orderId}/cancel`);
         return response.data;
     },
 
     // Demander un remboursement
     requestRefund: async (id: number, refundData: CreateRefundRequest): Promise<Order> => {
-        const response = await apiClient.post<Order>(`/orders/${id}/refunds`, refundData);
+        const response = await apiClient.post<Order>(`/orders/${id}/refund`, refundData);
         return response.data;
     },
 }

@@ -25,9 +25,9 @@ export const useCancelOrder = () => {
 
     return useMutation({
         mutationFn: (orderId: number) => ordersApi.cancelOrder(orderId),
-        onSuccess: (data) => {
+        onSuccess: (data, orderId) => {
             queryClient.invalidateQueries({ queryKey: ['orders'] });
-            queryClient.setQueryData(['orders', data.id], data);
+            queryClient.setQueryData(['order', orderId], data);
         }
     });
 }
@@ -39,9 +39,9 @@ export const useRequestRefund = () => {
     return useMutation({
         mutationFn: ({ orderId, refundData }: { orderId: number; refundData: CreateRefundRequest }) => 
             ordersApi.requestRefund(orderId, refundData),
-        onSuccess: (data) => {
+        onSuccess: (data, {orderId}) => {
             queryClient.invalidateQueries({ queryKey: ['orders'] });
-            queryClient.setQueryData(['orders', data.id], data);
+            queryClient.setQueryData(['order', orderId], data);
         }
     });
 }
