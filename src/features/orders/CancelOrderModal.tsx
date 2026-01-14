@@ -19,10 +19,7 @@ export const CancelOrderModal = ({
     >
       <div className="mb-6">
         <p className="text-gray-700">
-          {t(
-            "orders.cancel.confirmation",
-            `Are you sure you want to cancel order ${reference}? This action cannot be undone.`
-          )}
+          {t("orders.cancel.confirmation", { reference })}
         </p>
       </div>
       <div className="flex gap-3 justify-end">
@@ -32,7 +29,7 @@ export const CancelOrderModal = ({
           onClick={onClose}
           disabled={isLoading}
         >
-          {t("common.cancel", "Cancel")}
+          {t("common.back", "Back")}
         </button>
         <button
           className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 disabled:opacity-50"
@@ -42,7 +39,7 @@ export const CancelOrderModal = ({
         >
           {isLoading
             ? t("common.cancelling", "Cancelling...")
-            : t("common.cancel", "Cancel")}
+            : t("orders.cancel.title", "Cancel Order")}
         </button>
       </div>
     </Modal>

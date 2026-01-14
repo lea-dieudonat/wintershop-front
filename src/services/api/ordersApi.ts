@@ -17,7 +17,11 @@ export const ordersApi = {
 
     // Annuler une commande
     cancelOrder: async (orderId: number): Promise<Order> => {
-        const response = await apiClient.patch<Order>(`/orders/${orderId}/cancel`);
+        const response = await apiClient.patch<Order>(`/orders/${orderId}/cancel`, null, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
         return response.data;
     },
 

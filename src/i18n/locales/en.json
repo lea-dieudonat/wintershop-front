@@ -67,6 +67,15 @@
     "profile": "Profile"
   },
   "orders": {
+    "cancel": {
+      "confirm": "Are you sure you want to cancel this order?",
+      "confirmation": "Are you sure you want to cancel order {reference}? This action cannot be undone.",
+      "deadlineExpired": "The 24 hour cancellation period has expired.",
+      "invalidStatus": "Only orders with 'Pending' status can be cancelled.",
+      "success": "Your order has been successfully cancelled.",
+      "title": "Cancel Order",
+      "error": "Failed to cancel the order."
+    },
     "date": "Date",
     "description": "Review your past orders and their statuses.",
     "details": {
@@ -89,12 +98,15 @@
       "reasonLabel": "Reason for refund",
       "reasonPlaceholder": "Enter the reason for your refund request",
       "reasonRequired": "Please provide a reason for the refund request",
-      "title": "Request a Refund"
-    },
-    "cancel": {
-      "confirm": "Are you sure you want to cancel this order?",
-      "success": "Your order has been successfully cancelled.",
-      "title": "Cancel Order"
+      "reasonMaxLength": "The reason must not exceed 500 characters",
+      "reasonMinLength": "The reason must be at least 10 characters long",
+      "reasonNotBlank": "The reason cannot be blank",
+      "title": "Request a Refund",
+      "success": "Refund requested successfully.",
+      "error": "Failed to request a refund.",
+      "alreadyRequested": "A refund request already exists for this order.",
+      "deadlineExpired": "The 14-day refund period has expired.",
+      "notDelivered": "Only delivered orders can be refunded."
     },
     "status": {
       "cancelled": "Cancelled",

@@ -115,12 +115,24 @@
       "reasonLabel": "Raison du remboursement",
       "reasonPlaceholder": "Entrez la raison de votre demande de remboursement",
       "reasonRequired": "Veuillez fournir une raison pour la demande de remboursement",
-      "title": "Demander un remboursement"
+      "reasonMaxLength": "La raison ne doit pas dépasser 500 caractères",
+      "reasonMinLength": "La raison doit comporter au moins 10 caractères",
+      "reasonNotBlank": "La raison ne peut pas être vide",
+      "title": "Demander un remboursement",
+      "success": "Remboursement demandé avec succès.",
+      "error": "Échec de la demande de remboursement.",
+      "alreadyRequested": "Une demande de remboursement existe déjà pour cette commande.",
+      "deadlineExpired": "Le délai de remboursement de 14 jours est expiré.",
+      "notDelivered": "Seules les commandes livrées peuvent être remboursées."
     },
     "cancel": {
       "confirm": "Êtes-vous sûr de vouloir annuler cette commande ?",
+      "confirmation": "Êtes-vous sûr de vouloir annuler la commande {reference} ? Cette action ne peut pas être annulée.",
+      "deadlineExpired": "Le délai d'annulation de 24 heures est expiré.",
+      "invalidStatus": "Seules les commandes avec le statut 'En attente' peuvent être annulées.",
       "success": "Votre commande a été annulée avec succès.",
-      "title": "Annuler la commande"
+      "title": "Annuler la commande",
+      "error": "Échec de l'annulation de la commande."
     }
   },
   "errors": {

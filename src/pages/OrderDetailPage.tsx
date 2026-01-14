@@ -23,28 +23,16 @@ export const OrderDetailPage = () => {
   const [isRefundModalOpen, setIsRefundModalOpen] = useState(false);
 
   const handleCancelOrder = async () => {
-    try {
-      await cancelOrderMutation.mutateAsync(Number(id));
-      setIsCancelModalOpen(false);
-    } catch {
-      alert(t("orders.cancel.error", "Failed to cancel the order."));
-    }
+    await cancelOrderMutation.mutateAsync(Number(id));
+    setIsCancelModalOpen(false);
   };
 
   const handleRequestRefund = async (reason: string) => {
-    try {
-      await requestRefundMutation.mutateAsync({
-        orderId: Number(id),
-        refundData: { reason },
-      });
-      // Close modal and show success message
-      setIsRefundModalOpen(false);
-      alert(
-        t("orders.refund.success", "Refund request submitted successfully.")
-      );
-    } catch {
-      alert(t("orders.refund.error", "Failed to submit refund request."));
-    }
+    await requestRefundMutation.mutateAsync({
+      orderId: Number(id),
+      refundData: { reason },
+    });
+    setIsRefundModalOpen(false);
   };
 
   if (isLoading) {
@@ -181,14 +169,17 @@ export const OrderDetailPage = () => {
                 {t("orders.details.cancelOrder")}
               </button>
             )}
-            {order.status === "delivered" && !order.refundRequest && (
-              <button
-                onClick={() => setIsRefundModalOpen(true)}
-                className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700"
-              >
-                {t("orders.details.requestRefund")}
-              </button>
-            )}
+            {["paid", "processing", "shipped", "delivered"].includes(
+              order.status
+            ) &&
+              !order.refundRequest && (
+                <button
+                  onClick={() => setIsRefundModalOpen(true)}
+                  className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700"
+                >
+                  {t("orders.details.requestRefund")}
+                </button>
+              )}
           </div>
         </div>
       </div>

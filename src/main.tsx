@@ -9,6 +9,7 @@ import { TolgeeProvider } from "@tolgee/react";
 import { tolgee } from "./i18n/i18n.ts";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext.tsx";
+import { Toaster } from "sonner";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,6 +18,12 @@ createRoot(document.getElementById("root")!).render(
         <TolgeeProvider tolgee={tolgee} fallback="Loading translations...">
           <AuthProvider>
             <App />
+            <Toaster
+              position="top-right"
+              richColors
+              closeButton
+              duration={4000}
+            />
             <ReactQueryDevtools initialIsOpen={false} />
           </AuthProvider>
         </TolgeeProvider>
