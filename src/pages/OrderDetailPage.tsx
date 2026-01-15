@@ -161,7 +161,7 @@ export const OrderDetailPage = () => {
             {t("orders.details.actions")}
           </h2>
           <div className="flex gap-4">
-            {order.status === "pending" && (
+            {(order.canRequestCancellation ?? false) && (
               <button
                 onClick={() => setIsCancelModalOpen(true)}
                 className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
@@ -169,17 +169,14 @@ export const OrderDetailPage = () => {
                 {t("orders.details.cancelOrder")}
               </button>
             )}
-            {["paid", "processing", "shipped", "delivered"].includes(
-              order.status
-            ) &&
-              !order.refundRequest && (
-                <button
-                  onClick={() => setIsRefundModalOpen(true)}
-                  className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700"
-                >
-                  {t("orders.details.requestRefund")}
-                </button>
-              )}
+            {(order.canRequestRefund ?? false) && (
+              <button
+                onClick={() => setIsRefundModalOpen(true)}
+                className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700"
+              >
+                {t("orders.details.requestRefund")}
+              </button>
+            )}
           </div>
         </div>
       </div>

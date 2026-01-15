@@ -49,6 +49,8 @@ export interface Order {
   shippingAddress: Address;
   billingAddress: Address;
   refundRequest: RefundRequest | null;
+  canRequestRefund?: boolean;
+  canRequestCancellation?: boolean;
 }
 
 // Pour la liste (version allégée)

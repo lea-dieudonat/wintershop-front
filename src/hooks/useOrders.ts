@@ -50,9 +50,9 @@ export const useRequestRefund = () => {
     return useMutation({
         mutationFn: ({ orderId, refundData }: { orderId: number; refundData: CreateRefundRequest }) => 
             ordersApi.requestRefund(orderId, refundData),
-        onSuccess: (data, {orderId}) => {
+        onSuccess: (_data, {orderId}) => {
             queryClient.invalidateQueries({ queryKey: ['orders'] });
-            queryClient.setQueryData(['order', orderId], data);
+            queryClient.invalidateQueries({ queryKey: ['order', orderId] });
             toast.success(t("orders.refund.success", "Refund requested successfully."));
         },
         onError: (error: AxiosError<ApiErrorResponse>) => 
