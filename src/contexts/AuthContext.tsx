@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { authApi } from "../services/api/authApi";
-import type { User, AuthState, LoginCredentials } from "../types/authTypes";
+import { authApi } from "@/services/api/authApi";
+import type { User, AuthState, LoginCredentials } from "@/types/authTypes";
 import { AuthContext } from "./Auth";
 
 // Fonction helper pour récupérer l'état initial depuis le localStorage

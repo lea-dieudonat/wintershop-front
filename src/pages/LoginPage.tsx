@@ -1,8 +1,8 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth";
 import { useNavigate, Link, useLocation } from "react-router-dom";
-import { ROUTES } from "../router/routes";
+import { ROUTES } from "@/router/routes";
 import { useTranslate } from "@tolgee/react";
 
 export const LoginPage = () => {

@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { HomePage } from "../pages/HomePage";
-import { LoginPage } from "../pages/LoginPage";
-import { ProductsPage } from "../pages/ProductsPage";
-import { OrdersPage } from "../pages/OrdersPage";
-import { OrderDetailPage } from "../pages/OrderDetailPage";
-import { ROUTES } from "./routes";
-import { ProtectedRoute } from "../components/auth/ProtectedRoute";
+import { HomePage } from "@/pages/HomePage";
+import { LoginPage } from "@/pages/LoginPage";
+import { ProductsPage } from "@/pages/ProductsPage";
+import { OrdersPage } from "@/pages/OrdersPage";
+import { OrderDetailPage } from "@/pages/OrderDetailPage";
+import { ROUTES } from "@/router/routes";
+import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
 // TODO: Créer ces pages plus tard
 // import { ProductDetailPage } from '../pages/ProductDetailPage';

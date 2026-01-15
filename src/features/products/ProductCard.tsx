@@ -1,6 +1,6 @@
-import { formatPrice } from "../../utils/formatters";
-import { getProductTranslation } from "../../utils/translationHelper";
-import type { Product } from "../../types/productTypes";
+import { formatPrice } from "@/utils/formatters";
+import { getProductTranslation } from "@/utils/translationHelper";
+import type { Product } from "@/types/productTypes";
 import { useTranslate, useTolgee } from "@tolgee/react";
 
 interface ProductCardProps {

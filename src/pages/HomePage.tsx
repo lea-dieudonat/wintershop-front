@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ROUTES } from "../router/routes";
+import { ROUTES } from "@/router/routes";
 import { useTranslate } from "@tolgee/react";
 
 export const HomePage = () => {

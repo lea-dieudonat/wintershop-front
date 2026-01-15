@@ -1,6 +1,6 @@
-import { Modal } from "../../components/ui/Modal";
+import { Modal } from "@/components/ui/Modal";
 import { useTranslate } from "@tolgee/react";
-import type { CancelOrderModalProps } from "../../types/modalTypes";
+import type { CancelOrderModalProps } from "@/types/modalTypes";
 
 export const CancelOrderModal = ({
   isOpen,

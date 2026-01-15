@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { OrderStatusBadge } from "../../components/ui/OrderStatusBadge";
-import { formatPrice, formatDate } from "../../utils/formatters";
-import { ROUTES } from "../../router/routes";
-import type { OrderListItem } from "../../types/orderTypes";
+import { OrderStatusBadge } from "@/components/ui/OrderStatusBadge";
+import { formatPrice, formatDate } from "@/utils/formatters";
+import { ROUTES } from "@/router/routes";
+import type { OrderListItem } from "@/types/orderTypes";
 import { useTranslate } from "@tolgee/react";
 import { useTolgee } from "@tolgee/react";
 

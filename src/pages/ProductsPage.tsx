@@ -1,8 +1,8 @@
 import { useTranslate } from "@tolgee/react";
-import { ErrorMessage } from "../components/ui/ErrorMessage";
-import { LoadingSpinner } from "../components/ui/LoadingSpinner";
-import { ProductList } from "../features/products/ProductList";
-import { useProducts } from "../hooks/useProducts";
+import { ErrorMessage } from "@/components/ui/ErrorMessage";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { ProductList } from "@/features/products/ProductList";
+import { useProducts } from "@/hooks/useProducts";
 
 export const ProductsPage = () => {
   const { t } = useTranslate();

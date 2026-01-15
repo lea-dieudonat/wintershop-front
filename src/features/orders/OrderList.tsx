@@ -1,5 +1,5 @@
 import { OrderCard } from "./OrderCard";
-import type { OrderListItem } from "../../types/orderTypes";
+import type { OrderListItem } from "@/types/orderTypes";
 import { useTranslate } from "@tolgee/react";
 
 interface OrderListProps {

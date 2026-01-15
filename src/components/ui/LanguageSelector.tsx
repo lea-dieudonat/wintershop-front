@@ -1,5 +1,5 @@
 import { useTolgee } from "@tolgee/react";
-import { AVAILABLE_LANGUAGES } from "../../i18n/languages";
+import { AVAILABLE_LANGUAGES } from "@/i18n/languages";
 
 export function LanguageSelector() {
   const tolgee = useTolgee(["language"]);

@@ -1,7 +1,7 @@
-import { useOrders } from "../hooks/useOrders";
-import { LoadingSpinner } from "../components/ui/LoadingSpinner";
-import { ErrorMessage } from "../components/ui/ErrorMessage";
-import { OrderList } from "../features/orders/OrderList";
+import { useOrders } from "@/hooks/useOrders";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { ErrorMessage } from "@/components/ui/ErrorMessage";
+import { OrderList } from "@/features/orders/OrderList";
 import { useTranslate } from "@tolgee/react";
 
 export const OrdersPage = () => {

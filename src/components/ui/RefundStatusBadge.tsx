@@ -1,4 +1,4 @@
-import type { RefundStatus } from "../../types/orderTypes";
+import type { RefundStatus } from "@/types/orderTypes";
 
 interface RefundStatusBadgeProps {
   status: RefundStatus;

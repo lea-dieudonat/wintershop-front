@@ -27,8 +27,8 @@
     "orders": "Mes commandes",
     "cart": "Panier",
     "profile": "Profil",
-    "logout": "Se déconnecter",
-    "login": "Se connecter"
+    "logout": "Déconnexion",
+    "login": "Connexion"
   },
   "home": {
     "title": "Bienvenue chez WinterShop",
@@ -54,7 +54,7 @@
     "title": "Connexion à WinterShop",
     "description": "Accédez à votre compte pour gérer vos commandes et paramètres.",
     "loggingIn": "Connexion en cours...",
-    "login": "Se connecter",
+    "login": "Connexion",
     "back": "Retour à l'accueil",
     "testCredentials": "Identifiants de test :"
     },

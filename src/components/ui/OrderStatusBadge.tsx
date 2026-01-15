@@ -1,4 +1,4 @@
-import type { OrderStatus } from "../../types/orderTypes";
+import type { OrderStatus } from "@/types/orderTypes";
 import { useTranslate } from "@tolgee/react";
 
 interface OrderStatusBadgeProps {

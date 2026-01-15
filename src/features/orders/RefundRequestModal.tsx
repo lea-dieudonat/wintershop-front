@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Modal } from "../../components/ui/Modal";
+import { Modal } from "@/components/ui/Modal";
 import { useTranslate } from "@tolgee/react";
-import type { RefundRequestModalProps } from "../../types/modalTypes";
+import type { RefundRequestModalProps } from "@/types/modalTypes";
 
 export const RefundRequestModal = ({
   isOpen,

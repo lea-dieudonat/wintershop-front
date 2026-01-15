@@ -1,13 +1,13 @@
 import { useParams, Link } from "react-router-dom";
-import { useCancelOrder, useOrder } from "../hooks/useOrders";
-import { ROUTES } from "../router/routes";
+import { useCancelOrder, useOrder } from "@/hooks/useOrders";
+import { ROUTES } from "@/router/routes";
 import { useTranslate, useTolgee } from "@tolgee/react";
-import { formatPrice, formatDate } from "../utils/formatters";
-import { OrderStatusBadge } from "../components/ui/OrderStatusBadge";
-import { CancelOrderModal } from "../features/orders/CancelOrderModal";
-import { RefundRequestModal } from "../features/orders/RefundRequestModal";
+import { formatPrice, formatDate } from "@/utils/formatters";
+import { OrderStatusBadge } from "@/components/ui/OrderStatusBadge";
+import { CancelOrderModal } from "@/features/orders/CancelOrderModal";
+import { RefundRequestModal } from "@/features/orders/RefundRequestModal";
 import { useState } from "react";
-import { useRequestRefund } from "../hooks/useOrders";
+import { useRequestRefund } from "@/hooks/useOrders";
 
 export const OrderDetailPage = () => {
   const { id } = useParams<{ id: string }>();
