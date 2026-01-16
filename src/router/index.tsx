@@ -4,6 +4,7 @@ import { LoginPage } from "@/pages/LoginPage";
 import { ProductsPage } from "@/pages/ProductsPage";
 import { OrdersPage } from "@/pages/OrdersPage";
 import { OrderDetailPage } from "@/pages/OrderDetailPage";
+import { CartPage } from "@/pages/CartPage";
 import { ROUTES } from "@/router/routes";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
@@ -38,10 +39,17 @@ export const AppRouter = () => {
           </ProtectedRoute>
         }
       />
+      <Route
+        path={ROUTES.CART}
+        element={
+          <ProtectedRoute>
+            <CartPage />
+          </ProtectedRoute>
+        }
+      />
       {/* Routes à implémenter plus tard */}
 
       {/* <Route path={ROUTES.PRODUCT_DETAILS(':id')} element={<ProductDetailPage />} />
-            <Route path={ROUTES.CART} element={<CartPage />} />
             <Route path={ROUTES.CHECKOUT} element={<CheckoutPage />} />
             <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
             <Route path={ROUTES.REGISTER} element={<RegisterPage />} />

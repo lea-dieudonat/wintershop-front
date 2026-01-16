@@ -23,9 +23,9 @@ export const API_ENDPOINTS = {
   PRODUCT: (id: number | string) => `${BASE.PRODUCTS}/${id}`,
 
   // Auth
-  LOGIN: `${BASE.AUTH}/login`,
-  LOGOUT: `${BASE.AUTH}/logout`,
-  ME: `${BASE.AUTH}/me`,
+  LOGIN: '/login',
+  LOGOUT: '/logout',
+  ME: '/me',
 } as const;
 
 // Optional named exports for cleaner imports
