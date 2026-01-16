@@ -30,7 +30,14 @@ export const AppRouter = () => {
           </ProtectedRoute>
         }
       />
-      <Route path={ROUTES.ORDER_DETAILS(":id")} element={<OrderDetailPage />} />
+      <Route
+        path={ROUTES.ORDER_DETAILS(":id")}
+        element={
+          <ProtectedRoute>
+            <OrderDetailPage />
+          </ProtectedRoute>
+        }
+      />
       {/* Routes à implémenter plus tard */}
 
       {/* <Route path={ROUTES.PRODUCT_DETAILS(':id')} element={<ProductDetailPage />} />
