@@ -4,6 +4,7 @@ import { useTranslate, useTolgee } from "@tolgee/react";
 import { formatPrice } from "@/utils/formatters";
 import { useUpdateCartItem, useRemoveCartItem } from "@/hooks/useCarts";
 import type { CartItem } from "@/types/cartTypes";
+import { toast } from "sonner";
 
 interface CartItemRowProps {
   item: CartItem;
@@ -18,24 +19,73 @@ export const CartItemRow = ({ item }: CartItemRowProps) => {
 
   const handleDecreaseQuantity = () => {
     if (item.quantity > 1) {
-      updateCartItem.mutate({
-        itemId: item.id,
-        productId: item.product.id,
-        quantity: item.quantity - 1,
-      });
+      updateCartItem.mutate(
+        {
+          itemId: item.id,
+          productId: item.product.id,
+          quantity: item.quantity - 1,
+        },
+        {
+          onSuccess: () => {
+            toast.success(t("cart.quantityUpdated", "Quantity updated."), {
+              description: t("cart.quantityUpdatedDesc", {
+                defaultValue: "{name}: {quantity}",
+                quantity: item.quantity - 1,
+                name: item.product.name,
+              }),
+            });
+          },
+          onError: () => {
+            toast.error(t("cart.updateError", "Failed to update quantity"));
+          },
+        }
+      );
     }
   };
 
   const handleIncreaseQuantity = () => {
-    updateCartItem.mutate({
-      itemId: item.id,
-      productId: item.product.id,
-      quantity: item.quantity + 1,
-    });
+    updateCartItem.mutate(
+      {
+        itemId: item.id,
+        productId: item.product.id,
+        quantity: item.quantity + 1,
+      },
+      {
+        onSuccess: () => {
+          toast.success(t("cart.quantityUpdated", "Quantity updated."), {
+            description: t("cart.quantityUpdatedDesc", {
+              defaultValue: "{name}: {quantity}",
+              quantity: item.quantity + 1,
+              name: item.product.name,
+            }),
+          });
+        },
+        onError: () => {
+          toast.error(t("cart.updateError", "Failed to update quantity"));
+        },
+      }
+    );
   };
 
   const handleRemoveItem = () => {
-    removeCartItem.mutate({ itemId: item.id, productId: item.product.id });
+    removeCartItem.mutate(
+      { itemId: item.id, productId: item.product.id },
+      {
+        onSuccess: () => {
+          toast.success(t("cart.Productremoved", "Product removed"), {
+            description: t("cart.productRemovedDesc", {
+              defaultValue: "{name} removed from cart.",
+              name: item.product.name,
+            }),
+          });
+        },
+        onError: () => {
+          toast.error(
+            t("cart.removeError", "Failed to remove item from cart.")
+          );
+        },
+      }
+    );
   };
 
   const isUpdating = updateCartItem.isPending;

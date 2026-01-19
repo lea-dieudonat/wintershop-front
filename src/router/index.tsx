@@ -7,6 +7,7 @@ import { OrderDetailPage } from "@/pages/OrderDetailPage";
 import { CartPage } from "@/pages/CartPage";
 import { ROUTES } from "@/router/routes";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
+import { ProductDetailPage } from "@/pages/ProductDetailPage";
 
 // TODO: Créer ces pages plus tard
 // import { ProductDetailPage } from '../pages/ProductDetailPage';
@@ -47,9 +48,13 @@ export const AppRouter = () => {
           </ProtectedRoute>
         }
       />
+      <Route
+        path={ROUTES.PRODUCT_DETAILS(":id")}
+        element={<ProductDetailPage />}
+      />
       {/* Routes à implémenter plus tard */}
 
-      {/* <Route path={ROUTES.PRODUCT_DETAILS(':id')} element={<ProductDetailPage />} />
+      {/* 
             <Route path={ROUTES.CHECKOUT} element={<CheckoutPage />} />
             <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
             <Route path={ROUTES.REGISTER} element={<RegisterPage />} />

@@ -9,3 +9,11 @@ export const useProducts = () => {
         queryFn: productsApi.getAll,
     });
 };
+
+export const useProduct = (id: string) => {
+    return useQuery({
+        queryKey: [...PRODUCTS_QUERY_KEY, id],
+        queryFn: () => productsApi.getById(id),
+        enabled: !!id,
+    });
+};

@@ -4,12 +4,17 @@ import { useAuth } from "@/hooks/useAuth";
 import { useTranslate } from "@tolgee/react";
 import { LanguageSelector } from "@/components/ui/LanguageSelector";
 import { useState, useEffect, useRef } from "react";
+import { ShoppingCart } from "lucide-react";
+import { useCart } from "@/hooks/useCarts";
 
 export const Navigation = () => {
   const { isAuthenticated, user, logout } = useAuth();
   const { t } = useTranslate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { data: cart } = useCart();
+  const totalItemsInCart =
+    cart?.items.reduce((sum: number, item) => sum + item.quantity, 0) || 0;
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -49,50 +54,60 @@ export const Navigation = () => {
 
             {/* Liens utilisateur */}
             {isAuthenticated ? (
-              <div className="relative" ref={dropdownRef}>
-                <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="hover:text-blue-400 transition-colors flex items-center whitespace-nowrap"
-                >
-                  {user?.firstName} {user?.lastName} ▼
-                </button>
-                {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
-                    <div>
-                      <Link
-                        to={ROUTES.PROFILE}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        👤 {t("nav.profile")}
-                      </Link>
-                      <Link
-                        to={ROUTES.CART}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        🛒 {t("nav.cart")}
-                      </Link>
-                      <Link
-                        to={ROUTES.ORDERS}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        {t("nav.orders")}
-                      </Link>
+              <>
+                <Link to={ROUTES.CART} className="relative">
+                  <ShoppingCart className="w-6 h-6" />
+                  {totalItemsInCart > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                      {totalItemsInCart > 99 ? "99+" : totalItemsInCart}
+                    </span>
+                  )}
+                </Link>
+                <div className="relative" ref={dropdownRef}>
+                  <button
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="hover:text-blue-400 transition-colors flex items-center whitespace-nowrap"
+                  >
+                    {user?.firstName} {user?.lastName} ▼
+                  </button>
+                  {isDropdownOpen && (
+                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+                      <div>
+                        <Link
+                          to={ROUTES.PROFILE}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          👤 {t("nav.profile")}
+                        </Link>
+                        <Link
+                          to={ROUTES.CART}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          🛒 {t("nav.cart")}
+                        </Link>
+                        <Link
+                          to={ROUTES.ORDERS}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          {t("nav.orders")}
+                        </Link>
+                      </div>
+                      <hr className="my-1 border-gray-300" />
+                      <div>
+                        <button
+                          onClick={logout}
+                          className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                        >
+                          {t("nav.logout")}
+                        </button>
+                      </div>
                     </div>
-                    <hr className="my-1 border-gray-300" />
-                    <div>
-                      <button
-                        onClick={logout}
-                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-                      >
-                        {t("nav.logout")}
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
+              </>
             ) : (
               <Link
                 to={ROUTES.LOGIN}

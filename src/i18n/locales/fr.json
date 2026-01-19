@@ -1,5 +1,14 @@
 {
   "cart": {
+    "addedToCart": "Produit ajouté au panier !",
+    "addError": "Échec de l'ajout du produit au panier.",
+    "productAddedDesc": "{quantity} x {name}",
+    "quantityUpdated": "Quantité mise à jour.",
+    "quantityUpdatedDesc": "{name}: {quantity}",
+    "updateError": "Échec de la mise à jour de la quantité",
+    "Productremoved": "Produit supprimé",
+    "productRemovedDesc": "{name} supprimé du panier.",
+    "removeError": "Échec de la suppression de l'article du panier.",
     "empty": {
       "title": "Votre panier est vide",
       "description": "Parcourez nos produits et ajoutez des articles à votre panier pour commencer.",
@@ -13,7 +22,7 @@
       "title": "Résumé de la commande",
       "items": "Articles",
       "subtotal": "Sous-total",
-      "total": "Total : {total}",
+      "total": "Total",
       "checkout": "Procéder au paiement"
     },
     "title": "Votre panier"
@@ -160,6 +169,18 @@
     "notFound": "Ressource non trouvée",
     "unauthorized": "Vous devez être connecté pour accéder à cette page",
     "loadProducts": "Impossible de charger les produits",
+    "loadProduct": "Impossible de charger le produit.",
     "loadOrders": "Impossible de charger vos commandes"
+  },
+  "product": {
+    "noImage": "Pas d'image disponible",
+    "outOfStock": "Rupture de stock",
+    "lowStock": "Seulement {{stock}} restant en stock !",
+    "inStock": "En stock",
+    "quantity": "Quantité",
+    "decreaseQuantity": "Diminuer la quantité",
+    "increaseQuantity": "Augmenter la quantité",
+    "maxQuantity": "Quantité maximale atteinte",
+    "addToCart": "Ajouter au panier"
   }
 }

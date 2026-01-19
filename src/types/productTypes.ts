@@ -27,3 +27,17 @@ export interface ProductsResponse {
         itemsPerPage: number;
     };
 }
+
+export interface ProductDetail {
+    id: number;
+    name: string;
+    description: string;
+    price: string;
+    stock: number;
+    category: {
+        id: number;
+        name: string;
+    };
+    imageUrl?: string;
+    images?: string[];
+}
