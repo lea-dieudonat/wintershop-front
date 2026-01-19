@@ -1,5 +1,5 @@
 import { apiClient } from "@/services/api/clientApi";
-import type { Cart, AddToCartPayload, UpdateCartItemPayload } from "@/types/cartTypes";
+import type { Cart, AddToCartPayload, UpdateCartItemPayload, RemoveCartItemPayload } from "@/types/cartTypes";
 import { CART, CART_ITEMS } from "@/lib/apiEndpoints";
 
 export const cartApi = {
@@ -13,12 +13,17 @@ export const cartApi = {
     },
     updateCartItem: async (payload: UpdateCartItemPayload): Promise<Cart> => {
         const response = await apiClient.patch<Cart>(`${CART_ITEMS}/${payload.itemId}`, {
+            productId: payload.productId,
             quantity: payload.quantity,
         });
         return response.data;
     },
-    removeCartItem: async (itemId: number): Promise<Cart> => {
-        const response = await apiClient.delete<Cart>(`${CART_ITEMS}/${itemId}`);
+    removeCartItem: async (payload: RemoveCartItemPayload): Promise<Cart> => {
+        const response = await apiClient.delete<Cart>(`${CART_ITEMS}/${payload.itemId}`, {
+            data: {
+                productId: payload.productId,
+            },
+        });
         return response.data;
     },
 };

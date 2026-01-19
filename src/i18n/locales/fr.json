@@ -1,4 +1,23 @@
 {
+  "cart": {
+    "empty": {
+      "title": "Votre panier est vide",
+      "description": "Parcourez nos produits et ajoutez des articles à votre panier pour commencer.",
+      "shopNow": "Acheter maintenant"
+    },
+    "item": {
+      "noImage": "Pas d'image",
+      "remove": "Supprimer l'article"
+    },
+    "summary": {
+      "title": "Résumé de la commande",
+      "items": "Articles",
+      "subtotal": "Sous-total",
+      "total": "Total : {total}",
+      "checkout": "Procéder au paiement"
+    },
+    "title": "Votre panier"
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur est survenue",
@@ -57,7 +76,7 @@
     "login": "Connexion",
     "back": "Retour à l'accueil",
     "testCredentials": "Identifiants de test :"
-    },
+  },
   "products": {
     "title": "Liste des produits",
     "noProducts": "Aucun produit disponible",

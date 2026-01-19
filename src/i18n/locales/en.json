@@ -1,4 +1,23 @@
 {
+  "cart": {
+    "empty": {
+      "description": "Browse our products and add items to your cart to get started.",
+      "shopNow": "Shop Now",
+      "title": "Your Cart is Empty"
+    },
+    "item": {
+      "noImage": "No image ",
+      "remove": "Remove item"
+    },
+    "summary": {
+      "checkout": "Proceed to Checkout",
+      "items": "Items",
+      "subtotal": "Subtotal",
+      "title": "Order Summary",
+      "total": "Total: {total}"
+    },
+    "title": "Your Shopping Cart"
+  },
   "common": {
     "back": "Back",
     "cancel": "Cancel",

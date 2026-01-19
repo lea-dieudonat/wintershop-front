@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { cartApi } from '@/services/api/cartApi';
-import type { Cart, AddToCartPayload, UpdateCartItemPayload  } from '@/types/cartTypes';
+import type { Cart, AddToCartPayload, UpdateCartItemPayload, RemoveCartItemPayload  } from '@/types/cartTypes';
 
 const CART_QUERY_KEY = ['cart'];
 
@@ -37,7 +37,7 @@ export const useRemoveCartItem = () => {
     const queryClient = useQueryClient();
 
     return useMutation({
-        mutationFn: (itemId: number) => cartApi.removeCartItem(itemId),
+        mutationFn: (payload: RemoveCartItemPayload) => cartApi.removeCartItem(payload),
         onSuccess: (updatedCart: Cart) => {
             queryClient.setQueryData(CART_QUERY_KEY, updatedCart);
         },

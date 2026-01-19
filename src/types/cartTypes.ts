@@ -30,5 +30,11 @@ export interface AddToCartPayload {
 
 export interface UpdateCartItemPayload {
     itemId: number;
+    productId: number;
     quantity: number;
+}
+
+export interface RemoveCartItemPayload {
+    itemId: number;
+    productId: number;
 }

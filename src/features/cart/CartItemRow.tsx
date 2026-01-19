@@ -18,16 +18,24 @@ export const CartItemRow = ({ item }: CartItemRowProps) => {
 
   const handleDecreaseQuantity = () => {
     if (item.quantity > 1) {
-      updateCartItem.mutate({ itemId: item.id, quantity: item.quantity - 1 });
+      updateCartItem.mutate({
+        itemId: item.id,
+        productId: item.product.id,
+        quantity: item.quantity - 1,
+      });
     }
   };
 
   const handleIncreaseQuantity = () => {
-    updateCartItem.mutate({ itemId: item.id, quantity: item.quantity + 1 });
+    updateCartItem.mutate({
+      itemId: item.id,
+      productId: item.product.id,
+      quantity: item.quantity + 1,
+    });
   };
 
   const handleRemoveItem = () => {
-    removeCartItem.mutate(item.id);
+    removeCartItem.mutate({ itemId: item.id, productId: item.product.id });
   };
 
   const isUpdating = updateCartItem.isPending;
