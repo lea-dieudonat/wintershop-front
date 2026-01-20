@@ -9,6 +9,12 @@
     "Productremoved": "Product removed",
     "productRemovedDesc": "{name} removed from cart.",
     "removeError": "Failed to remove item from cart.",
+    "clearCart": "Clear Cart",
+    "cartCleared": "Cart cleared.",
+    "cartClearedDesc": "All items have been removed from your cart.",
+    "clearError": "Failed to clear cart.",
+    "clearCartConfirmTitle": "Clear Cart",
+    "clearCartConfirmMessage": "Are you sure you want to clear your cart? This action cannot be undone.",
     "empty": {
       "description": "Browse our products and add items to your cart to get started.",
       "shopNow": "Shop Now",

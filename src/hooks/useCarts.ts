@@ -42,6 +42,17 @@ export const useRemoveCartItem = () => {
 
     return useMutation({
         mutationFn: (payload: RemoveCartItemPayload) => cartApi.removeCartItem(payload),
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: CART_QUERY_KEY });
+        },
+    });
+}
+
+export const useClearCart = () => {
+    const queryClient = useQueryClient();
+
+    return useMutation({
+        mutationFn: () => cartApi.clearCart(),
         onSuccess: (updatedCart: Cart) => {
             queryClient.setQueryData(CART_QUERY_KEY, updatedCart);
         },

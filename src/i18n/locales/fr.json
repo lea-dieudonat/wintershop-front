@@ -9,6 +9,12 @@
     "Productremoved": "Produit supprimé",
     "productRemovedDesc": "{name} supprimé du panier.",
     "removeError": "Échec de la suppression de l'article du panier.",
+    "clearCart": "Vider le panier",
+    "cartCleared": "Panier vidé.",
+    "cartClearedDesc": "Tous les articles ont été retirés de votre panier.",
+    "clearError": "Échec de la suppression du panier.",
+    "clearCartConfirmTitle": "Vider le panier",
+    "clearCartConfirmMessage": "Êtes-vous sûr de vouloir vider votre panier ? Cette action ne peut pas être annulée.",
     "empty": {
       "title": "Votre panier est vide",
       "description": "Parcourez nos produits et ajoutez des articles à votre panier pour commencer.",

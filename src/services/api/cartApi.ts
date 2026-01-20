@@ -26,4 +26,8 @@ export const cartApi = {
         });
         return response.data;
     },
+    clearCart: async (): Promise<Cart> => {
+        const response = await apiClient.delete<Cart>(CART);
+        return response.data;
+    }
 };

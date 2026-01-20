@@ -14,7 +14,7 @@ export const Navigation = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { data: cart } = useCart();
   const totalItemsInCart =
-    cart?.items.reduce((sum: number, item) => sum + item.quantity, 0) || 0;
+    cart?.items?.reduce((sum: number, item) => sum + item.quantity, 0) || 0;
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
