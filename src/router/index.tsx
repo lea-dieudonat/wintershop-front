@@ -8,11 +8,9 @@ import { CartPage } from "@/pages/CartPage";
 import { ROUTES } from "@/router/routes";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 import { ProductDetailPage } from "@/pages/ProductDetailPage";
+import { CheckoutPage } from "../pages/CheckoutPage";
 
 // TODO: Créer ces pages plus tard
-// import { ProductDetailPage } from '../pages/ProductDetailPage';
-// import { CartPage } from '../pages/CartPage';
-// import { CheckoutPage } from '../pages/CheckoutPage';
 // import { ProfilePage } from '../pages/ProfilePage';
 // import { RegisterPage } from '../pages/RegisterPage';
 // import { NotFoundPage } from '../pages/NotFoundPage';
@@ -52,10 +50,17 @@ export const AppRouter = () => {
         path={ROUTES.PRODUCT_DETAILS(":id")}
         element={<ProductDetailPage />}
       />
+      <Route
+        path={ROUTES.CHECKOUT}
+        element={
+          <ProtectedRoute>
+            <CheckoutPage />
+          </ProtectedRoute>
+        }
+      />
       {/* Routes à implémenter plus tard */}
 
       {/* 
-            <Route path={ROUTES.CHECKOUT} element={<CheckoutPage />} />
             <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
             <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
             <Route path="*" element={<NotFoundPage />} /> */}
