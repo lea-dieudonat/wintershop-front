@@ -7,21 +7,22 @@ import { Button } from "@/components/ui/Button";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 import { ErrorMessage } from "@/components/ui/ErrorMessage";
 import { useCart } from "@/hooks/useCarts";
-import { useAddresses } from "@/hooks/useAddresses";
+import { useAddresses } from "@/hooks/useAddress";
 import { useCheckout } from "@/hooks/useCheckout";
-import { AddressSelector } from "@/features/checkout/AddressSelector";
+import { AddressSelector } from "@/features/address/addressSelector";
 import { ShippingMethodSelector } from "@/features/checkout/ShippingMethodSelector";
 import { CheckoutSummary } from "@/features/checkout/CheckoutSummary";
-import { AddressFormModal } from "@/features/checkout/AddressFormModal";
+import { AddressFormModal } from "@/features/address/addressFormModal";
 import { ROUTES } from "@/router/routes";
-import type { ShippingMethod } from "@/types/checkout";
+import type { ShippingMethod } from "@/types/checkoutTypes";
+import type { Address } from "@/types/addressTypes";
 import { useTolgee } from "@tolgee/react";
 
 export const CheckoutPage = () => {
   const { t } = useTranslate();
   const navigate = useNavigate();
   const tolgee = useTolgee(["language"]);
-  const currentLanguage = tolgee.getLanguage();
+  const currentLanguage = tolgee.getLanguage() ?? "en";
 
   const { data: cart, isLoading: isLoadingCart, error: cartError } = useCart();
   const {
@@ -44,10 +45,18 @@ export const CheckoutPage = () => {
   const isLoading = isLoadingCart || isLoadingAddresses;
   const error = cartError || addressesError;
 
+  // Debug logging
+  if (cartError) {
+    console.error("Cart error:", cartError);
+  }
+  if (addressesError) {
+    console.error("Addresses error:", addressesError);
+  }
+
   // Auto-select default address if available
   useState(() => {
     if (addresses && addresses.length > 0 && !shippingAddressId) {
-      const defaultAddress = addresses.find((addr) => addr.isDefault);
+      const defaultAddress = addresses.find((addr: Address) => addr.isDefault);
       if (defaultAddress) {
         setShippingAddressId(defaultAddress.id);
         setBillingAddressId(defaultAddress.id);
@@ -122,7 +131,7 @@ export const CheckoutPage = () => {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center min-h-[400px]">
+      <div className="flex justify-center items-center min-h-100">
         <LoadingSpinner />
       </div>
     );
@@ -184,7 +193,7 @@ export const CheckoutPage = () => {
             <AddressSelector
               addresses={addresses || []}
               selectedAddressId={shippingAddressId}
-              onSelectAddress={(id) => {
+              onSelectAddress={(id: number) => {
                 setShippingAddressId(id);
                 if (sameAsBilling) {
                   setBillingAddressId(id);

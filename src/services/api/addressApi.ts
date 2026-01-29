@@ -6,8 +6,13 @@ export const addressApi = {
      * Get all addresses for the authenticated user.
      */
     getAll: async(): Promise<Address[]> => {
-        const response = await apiClient.get<AddressesResponse>('/addresses');
-        return response.data['hydra:member'];
+        try {
+            const response = await apiClient.get<AddressesResponse>('/addresses');
+            return response.data['hydra:member'] || [];
+        } catch (error) {
+            console.error('Failed to fetch addresses:', error);
+            return [];
+        }
     },
 
     /**

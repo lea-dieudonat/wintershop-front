@@ -11,6 +11,8 @@ export const useAddresses = () => {
     return useQuery({
         queryKey: [ADDRESSES_KEY],
         queryFn: addressApi.getAll,
+        retry: 1,
+        staleTime: 1000 * 30, // 30 seconds
     });
 }
 
