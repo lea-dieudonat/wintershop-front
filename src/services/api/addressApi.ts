@@ -8,7 +8,7 @@ export const addressApi = {
     getAll: async(): Promise<Address[]> => {
         try {
             const response = await apiClient.get<AddressesResponse>('/addresses');
-            return response.data['hydra:member'] || [];
+            return response.data.member || [];
         } catch (error) {
             console.error('Failed to fetch addresses:', error);
             return [];

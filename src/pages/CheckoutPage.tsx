@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslate } from "@tolgee/react";
 import { ArrowLeft, CreditCard } from "lucide-react";
@@ -45,16 +45,8 @@ export const CheckoutPage = () => {
   const isLoading = isLoadingCart || isLoadingAddresses;
   const error = cartError || addressesError;
 
-  // Debug logging
-  if (cartError) {
-    console.error("Cart error:", cartError);
-  }
-  if (addressesError) {
-    console.error("Addresses error:", addressesError);
-  }
-
   // Auto-select default address if available
-  useState(() => {
+  useEffect(() => {
     if (addresses && addresses.length > 0 && !shippingAddressId) {
       const defaultAddress = addresses.find((addr: Address) => addr.isDefault);
       if (defaultAddress) {
@@ -63,7 +55,8 @@ export const CheckoutPage = () => {
         setSameAsBilling(true);
       }
     }
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [addresses]);
 
   const handleSameAsBillingChange = (checked: boolean) => {
     setSameAsBilling(checked);

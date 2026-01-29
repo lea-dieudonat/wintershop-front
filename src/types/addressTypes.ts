@@ -29,6 +29,6 @@ export interface AddressesResponse {
     "@context": string;
     "@id": string;
     "@type": string;
-    "hydra:member": Address[];
-    "hydra:totalItems": number;
+    member: Address[];
+    totalItems: number;
 }

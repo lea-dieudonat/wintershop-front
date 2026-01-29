@@ -33,8 +33,67 @@
     },
     "title": "Your Shopping Cart"
   },
+  "address": {
+    "createNew": "Create New Address",
+    "addNew": "Add New",
+    "noAddresses": "No addresses saved yet.",
+    "createFirst": "Create your first address",
+    "default": "Default",
+    "phone": "Phone",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "street": "Street",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "phoneNumber": "Phone Number",
+    "additionalInfo": "Additional Info",
+    "additionalInfoPlaceholder": "Building number, floor, etc.",
+    "setAsDefault": "Set as default address",
+    "created": "Address created successfully!",
+    "createdDesc": "Your new address has been saved.",
+    "createError": "Failed to create address.",
+    "createErrorDesc": "An error occurred while saving your address. Please try again."
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shippingAddress": "Shipping Address",
+    "billingAddress": "Billing Address",
+    "sameAsBilling": "Billing address same as shipping address",
+    "emptyCart": "Your cart is empty.",
+    "continueShopping": "Continue Shopping",
+    "proceedToPayment": "Proceed to Payment",
+    "selectShippingMethod": "Select Shipping Method",
+    "orderSummary": "Order Summary",
+    "quantity": "Quantity",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "selectShipping": "Select shipping method",
+    "total": "Total",
+    "paymentInfo": "You will be redirected to a secure payment gateway to complete your purchase.",
+    "shippingMethod": {
+      "standard": "Standard Shipping",
+      "express": "Express Shipping",
+      "relay_point": "Relay Point Pickup"
+    },
+    "deliveryTime": {
+      "standard": "3-5 business days",
+      "express": "1-2 business days",
+      "relay_point": "5-7 business days"
+    },
+    "error": {
+      "load": "Failed to load checkout data.",
+      "noShippingAddress": "Please select a shipping address.",
+      "noBillingAddress": "Please select a billing address.",
+      "noShippingMethod": "Please select a shipping method.",
+      "failed": "Checkout failed. Please try again.",
+      "failedDesc": "There was an error processing your checkout."
+    }
+  },
   "common": {
     "back": "Back",
+    "backToCart": "Back to Cart",
     "cancel": "Cancel",
     "cancelling": "Cancelling...",
     "category": "Category",
@@ -51,6 +110,7 @@
       "placeholder": "Password"
     },
     "retry": "Retry",
+    "save": "Save",
     "stock": "Stock",
     "submit": "Submit",
     "submitting": "Submitting..."

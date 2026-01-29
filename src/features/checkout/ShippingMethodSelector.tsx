@@ -71,9 +71,12 @@ export const ShippingMethodSelector = ({
                   />
                   <Icon className="w-6 h-6 text-gray-700 shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center justify-between gap-2 mb-1">
                       <span className="font-semibold text-gray-900">
-                        {t(`checkout.shipping.${method.value}`, method.label)}
+                        {t(
+                          `checkout.shippingMethod.${method.value}`,
+                          method.label,
+                        )}
                       </span>
                       <span className="font-bold text-gray-900">
                         {isFree ? (

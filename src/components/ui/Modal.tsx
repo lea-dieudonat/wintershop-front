@@ -4,7 +4,7 @@ export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black bg-opacity-50"
@@ -12,8 +12,9 @@ export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6">
-        <div className="flex justify-between items-center mb-4">
+      <div className="relative bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] flex flex-col">
+        {/* Header - Fixed */}
+        <div className="flex justify-between items-center px-6 pt-6 pb-4 border-b flex-shrink-0">
           <h2 className="text-xl font-semibold">{title}</h2>
           <button
             className="text-gray-400 hover:text-gray-600"
@@ -34,7 +35,9 @@ export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
             </svg>
           </button>
         </div>
-        {children}
+
+        {/* Content - Scrollable */}
+        <div className="overflow-y-auto px-6 py-4 flex-1">{children}</div>
       </div>
     </div>
   );

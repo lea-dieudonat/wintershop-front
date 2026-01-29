@@ -73,7 +73,7 @@ export const AddressSelector = ({
                     className="mt-1 h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
                   />
                   <div className="flex-1 min-w-0">
-                    <div className="flex-items-center gap-2 mb-1">
+                    <div className="flex items-center gap-2 mb-1">
                       <span className="font-semibold text-gray-900">
                         {address.firstName} {address.lastName}
                       </span>
