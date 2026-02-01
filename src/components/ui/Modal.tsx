@@ -14,7 +14,7 @@ export const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
       {/* Modal */}
       <div className="relative bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] flex flex-col">
         {/* Header - Fixed */}
-        <div className="flex justify-between items-center px-6 pt-6 pb-4 border-b flex-shrink-0">
+        <div className="flex justify-between items-center px-6 pt-6 pb-4 border-b shrink-0">
           <h2 className="text-xl font-semibold">{title}</h2>
           <button
             className="text-gray-400 hover:text-gray-600"

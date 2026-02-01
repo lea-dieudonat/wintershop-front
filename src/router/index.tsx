@@ -61,7 +61,7 @@ export const AppRouter = () => {
         }
       />
       <Route
-        path="/checkout/success/:reference"
+        path={ROUTES.CHECKOUT_SUCCESS}
         element={
           <ProtectedRoute>
             <CheckoutSuccessPage />
@@ -69,7 +69,7 @@ export const AppRouter = () => {
         }
       />
       <Route
-        path="/checkout/cancel/:reference"
+        path={ROUTES.CHECKOUT_CANCEL}
         element={
           <ProtectedRoute>
             <CheckoutCancelPage />

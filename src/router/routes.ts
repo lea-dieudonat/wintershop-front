@@ -1,3 +1,8 @@
+const CHECKOUT_BASE = '/checkout';
+const ORDERS_BASE = '/orders';
+const PRODUCTS_BASE = '/products';
+const PROFILE_BASE = '/profile';
+
 export const ROUTES = {
     // Pages publiques
     HOME: '/',
@@ -5,22 +10,22 @@ export const ROUTES = {
     REGISTER: '/register',
 
     // Produits
-    PRODUCTS: '/products',
-    PRODUCT_DETAILS: (id: number | string) => `/products/${id}`,
+    PRODUCTS: PRODUCTS_BASE,
+    PRODUCT_DETAILS: (id: number | string) => `${PRODUCTS_BASE}/${id}`,
 
     // Panier
     CART: '/cart',
-    CHECKOUT: '/checkout',
-    CHECKOUT_SUCCESS: (reference: string) => `/checkout/success/${reference}`,
-    CHECKOUT_CANCEL: (reference: string) => `/checkout/cancel/${reference}`,
+    CHECKOUT: CHECKOUT_BASE,
+    CHECKOUT_SUCCESS: `${CHECKOUT_BASE}/success`,
+    CHECKOUT_CANCEL: `${CHECKOUT_BASE}/cancel`,
 
     // Commandes
-    ORDERS: '/orders',
-    ORDER_DETAILS: (id: number | string) => `/orders/${id}`,
+    ORDERS: ORDERS_BASE,
+    ORDER_DETAILS: (id: number | string) => `${ORDERS_BASE}/${id}`,
 
     // Profil
-    PROFILE: '/profile',
-    PROFILE_ADDRESSES: '/profile/addresses',
+    PROFILE: PROFILE_BASE,
+    PROFILE_ADDRESSES: `${PROFILE_BASE}/addresses`,
 
     // 404
     NOT_FOUND: '/404',
