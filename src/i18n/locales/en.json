@@ -89,6 +89,20 @@
       "noShippingMethod": "Please select a shipping method.",
       "failed": "Checkout failed. Please try again.",
       "failedDesc": "There was an error processing your checkout."
+    },
+    "success": {
+      "title": "Payment Successful!",
+      "message": "Thank you for your order!",
+      "reference": "Order reference",
+      "viewOrders": "View My Orders",
+      "continueShopping": "Continue Shopping"
+    },
+    "cancel": {
+      "title": "Payment Cancelled",
+      "message": "Your payment was cancelled.",
+      "reference": "Order reference",
+      "tryAgain": "Try Again",
+      "backToCart": "Back to Cart"
     }
   },
   "common": {

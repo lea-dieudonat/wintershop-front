@@ -11,6 +11,8 @@ export const ROUTES = {
     // Panier
     CART: '/cart',
     CHECKOUT: '/checkout',
+    CHECKOUT_SUCCESS: (reference: string) => `/checkout/success/${reference}`,
+    CHECKOUT_CANCEL: (reference: string) => `/checkout/cancel/${reference}`,
 
     // Commandes
     ORDERS: '/orders',

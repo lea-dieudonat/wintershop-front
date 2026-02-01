@@ -89,6 +89,20 @@
       "noShippingMethod": "Veuillez sélectionner une méthode de livraison.",
       "failed": "Échec du paiement. Veuillez réessayer.",
       "failedDesc": "Une erreur s'est produite lors du traitement de votre paiement."
+    },
+    "success": {
+      "title": "Paiement réussi !",
+      "message": "Merci pour votre commande !",
+      "reference": "Référence de commande",
+      "viewOrders": "Voir mes commandes",
+      "continueShopping": "Continuer mes achats"
+    },
+    "cancel": {
+      "title": "Paiement annulé",
+      "message": "Votre paiement a été annulé.",
+      "reference": "Référence de commande",
+      "tryAgain": "Réessayer",
+      "backToCart": "Retour au panier"
     }
   },
   "common": {

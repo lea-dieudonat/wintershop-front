@@ -5,10 +5,12 @@ import { ProductsPage } from "@/pages/ProductsPage";
 import { OrdersPage } from "@/pages/OrdersPage";
 import { OrderDetailPage } from "@/pages/OrderDetailPage";
 import { CartPage } from "@/pages/CartPage";
+import { CheckoutPage } from "@/pages/CheckoutPage";
+import { CheckoutSuccessPage } from "@/pages/CheckoutSuccessPage";
+import { CheckoutCancelPage } from "@/pages/CheckoutCancelPage";
+import { ProductDetailPage } from "@/pages/ProductDetailPage";
 import { ROUTES } from "@/router/routes";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
-import { ProductDetailPage } from "@/pages/ProductDetailPage";
-import { CheckoutPage } from "../pages/CheckoutPage";
 
 // TODO: Créer ces pages plus tard
 // import { ProfilePage } from '../pages/ProfilePage';
@@ -55,6 +57,22 @@ export const AppRouter = () => {
         element={
           <ProtectedRoute>
             <CheckoutPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/checkout/success/:reference"
+        element={
+          <ProtectedRoute>
+            <CheckoutSuccessPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/checkout/cancel/:reference"
+        element={
+          <ProtectedRoute>
+            <CheckoutCancelPage />
           </ProtectedRoute>
         }
       />
