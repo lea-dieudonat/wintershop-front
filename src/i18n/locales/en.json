@@ -6,7 +6,7 @@
     "quantityUpdated": "Quantity updated.",
     "quantityUpdatedDesc": "{name}: {quantity}",
     "updateError": "Failed to update quantity",
-    "Productremoved": "Product removed",
+    "productRemoved": "Product removed",
     "productRemovedDesc": "{name} removed from cart.",
     "removeError": "Failed to remove item from cart.",
     "clearCart": "Clear Cart",
@@ -261,5 +261,17 @@
     "increaseQuantity": "Increase quantity",
     "maxQuantity": "Maximum quantity reached",
     "addToCart": "Add to Cart"
+  },
+  "user": {
+    "firstName": {
+      "maxLength": "First name cannot be longer than 50 characters",
+      "minLength": "First name must be at least 2 characters long",
+      "notBlank": "First name is required"
+    },
+    "lastName": {
+      "maxLength": "Last name cannot be longer than 50 characters",
+      "minLength": "Last name must be at least 2 characters long",
+      "notBlank": "Last name is required"
+    }
   }
 }

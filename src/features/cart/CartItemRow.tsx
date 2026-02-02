@@ -38,7 +38,7 @@ export const CartItemRow = ({ item }: CartItemRowProps) => {
           onError: () => {
             toast.error(t("cart.updateError", "Failed to update quantity"));
           },
-        }
+        },
       );
     }
   };
@@ -63,7 +63,7 @@ export const CartItemRow = ({ item }: CartItemRowProps) => {
         onError: () => {
           toast.error(t("cart.updateError", "Failed to update quantity"));
         },
-      }
+      },
     );
   };
 
@@ -72,7 +72,7 @@ export const CartItemRow = ({ item }: CartItemRowProps) => {
       { itemId: item.id, productId: item.product.id },
       {
         onSuccess: () => {
-          toast.success(t("cart.Productremoved", "Product removed"), {
+          toast.success(t("cart.productRemoved", "Product removed"), {
             description: t("cart.productRemovedDesc", {
               defaultValue: "{name} removed from cart.",
               name: item.product.name,
@@ -81,10 +81,10 @@ export const CartItemRow = ({ item }: CartItemRowProps) => {
         },
         onError: () => {
           toast.error(
-            t("cart.removeError", "Failed to remove item from cart.")
+            t("cart.removeError", "Failed to remove item from cart."),
           );
         },
-      }
+      },
     );
   };
 

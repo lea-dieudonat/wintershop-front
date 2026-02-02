@@ -6,7 +6,7 @@
     "quantityUpdated": "Quantité mise à jour.",
     "quantityUpdatedDesc": "{name}: {quantity}",
     "updateError": "Échec de la mise à jour de la quantité",
-    "Productremoved": "Produit supprimé",
+    "productRemoved": "Produit supprimé",
     "productRemovedDesc": "{name} supprimé du panier.",
     "removeError": "Échec de la suppression de l'article du panier.",
     "clearCart": "Vider le panier",
