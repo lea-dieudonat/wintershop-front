@@ -34,12 +34,16 @@
     "title": "Your Shopping Cart"
   },
   "address": {
+    "title": "My Addresses",
     "createNew": "Create New Address",
     "addNew": "Add New",
     "noAddresses": "No addresses saved yet.",
     "createFirst": "Create your first address",
     "default": "Default",
     "phone": "Phone",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete this address?",
     "firstName": "First Name",
     "lastName": "Last Name",
     "street": "Street",
@@ -50,10 +54,16 @@
     "additionalInfo": "Additional Info",
     "additionalInfoPlaceholder": "Building number, floor, etc.",
     "setAsDefault": "Set as default address",
+    "isDefault": "Set as default address",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
     "created": "Address created successfully!",
     "createdDesc": "Your new address has been saved.",
     "createError": "Failed to create address.",
-    "createErrorDesc": "An error occurred while saving your address. Please try again."
+    "createErrorDesc": "An error occurred while saving your address. Please try again.",
+    "updateError": "Failed to update address.",
+    "deleteError": "Failed to delete address."
   },
   "checkout": {
     "title": "Checkout",
@@ -113,6 +123,8 @@
     "category": "Category",
     "close": "Close",
     "createdAt": "Created at: {date}",
+    "edit": "Edit",
+    "editing": "Editing...",
     "email": {
       "label": "Email",
       "placeholder": "Email address"

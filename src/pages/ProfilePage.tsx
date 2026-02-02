@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useUser } from "../hooks/useUser";
 import { useAuth } from "../hooks/useAuth";
 import PersonalInfoSection from "@/features/profile/PersonalInfoSection";
+import AddressSection from "@/features/address/addressSection";
 import { useTranslate } from "@tolgee/react";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
 type TabType = "info" | "addresses" | "orders" | "security";
 
@@ -14,11 +16,7 @@ export const ProfilePage = () => {
   const { data: user, isLoading } = useUser(authUser?.id || 0);
 
   if (isLoading) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">{t("loading")}</div>
-      </div>
-    );
+    return <LoadingSpinner />;
   }
 
   if (!user) {
@@ -68,14 +66,7 @@ export const ProfilePage = () => {
       <div>
         {activeTab === "info" && <PersonalInfoSection user={user} />}
 
-        {activeTab === "addresses" && (
-          <div>
-            <h2 className="text-xl font-semibold mb-4">
-              {t("profile.tabs.addresses")}
-            </h2>
-            <p>{t("profile.content.coming_soon")}</p>
-          </div>
-        )}
+        {activeTab === "addresses" && <AddressSection />}
 
         {activeTab === "orders" && (
           <div>

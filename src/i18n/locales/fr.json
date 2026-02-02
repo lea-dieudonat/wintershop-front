@@ -34,12 +34,16 @@
     "title": "Votre panier"
   },
   "address": {
+    "title": "Mes adresses",
     "createNew": "Créer une nouvelle adresse",
     "addNew": "Ajouter",
     "noAddresses": "Aucune adresse enregistrée.",
     "createFirst": "Créer votre première adresse",
     "default": "Par défaut",
     "phone": "Téléphone",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette adresse ?",
     "firstName": "Prénom",
     "lastName": "Nom",
     "street": "Rue",
@@ -50,10 +54,16 @@
     "additionalInfo": "Informations complémentaires",
     "additionalInfoPlaceholder": "Numéro de bâtiment, étage, etc.",
     "setAsDefault": "Définir comme adresse par défaut",
+    "isDefault": "Définir comme adresse par défaut",
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
     "created": "Adresse créée avec succès !",
     "createdDesc": "Votre nouvelle adresse a été enregistrée.",
     "createError": "Échec de la création de l'adresse.",
-    "createErrorDesc": "Une erreur s'est produite lors de l'enregistrement de votre adresse. Veuillez réessayer."
+    "createErrorDesc": "Une erreur s'est produite lors de l'enregistrement de votre adresse. Veuillez réessayer.",
+    "updateError": "Échec de la mise à jour de l'adresse.",
+    "deleteError": "Échec de la suppression de l'adresse."
   },
   "checkout": {
     "title": "Paiement",
@@ -107,6 +117,8 @@
   },
   "common": {
     "loading": "Chargement...",
+    "edit": "Modifier",
+    "editing": "Modification en cours...",
     "error": "Une erreur est survenue",
     "retry": "Réessayer",
     "back": "Retour",
