@@ -1,20 +1,22 @@
 import { useState } from "react";
-import { useUser } from "@/hooks/useUser";
+import { useUser } from "../hooks/useUser";
+import { useAuth } from "../hooks/useAuth";
 import PersonalInfoSection from "@/features/profile/PersonalInfoSection";
+import { useTranslate } from "@tolgee/react";
 
 type TabType = "info" | "addresses" | "orders" | "security";
 
 export const ProfilePage = () => {
+  const { t } = useTranslate();
   const [activeTab, setActiveTab] = useState<TabType>("info");
+  const { user: authUser } = useAuth();
 
-  // TODO: Récupérer l'ID du user depuis le contexte d'authentification
-  const userId = 1; // Temporaire
-  const { data: user, isLoading } = useUser(userId);
+  const { data: user, isLoading } = useUser(authUser?.id || 0);
 
   if (isLoading) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <div className="text-center">Chargement...</div>
+        <div className="text-center">{t("loading")}</div>
       </div>
     );
   }
@@ -23,22 +25,22 @@ export const ProfilePage = () => {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center text-red-600">
-          Erreur lors du chargement du profil
+          {t("profile.error.loading")}
         </div>
       </div>
     );
   }
 
   const tabs = [
-    { id: "info" as TabType, label: "Informations personnelles" },
-    { id: "addresses" as TabType, label: "Mes adresses" },
-    { id: "orders" as TabType, label: "Mes commandes" },
-    { id: "security" as TabType, label: "Sécurité" },
+    { id: "info" as TabType, label: t("profile.tabs.info") },
+    { id: "addresses" as TabType, label: t("profile.tabs.addresses") },
+    { id: "orders" as TabType, label: t("profile.tabs.orders") },
+    { id: "security" as TabType, label: t("profile.tabs.security") },
   ];
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-3xl font-bold mb-8">Mon profil</h1>
+      <h1 className="text-3xl font-bold mb-8">{t("profile.title")}</h1>
 
       {/* Navigation par onglets */}
       <div className="border-b border-gray-200 mb-8">
@@ -68,22 +70,28 @@ export const ProfilePage = () => {
 
         {activeTab === "addresses" && (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Mes adresses</h2>
-            <p>Contenu à venir...</p>
+            <h2 className="text-xl font-semibold mb-4">
+              {t("profile.tabs.addresses")}
+            </h2>
+            <p>{t("profile.content.coming_soon")}</p>
           </div>
         )}
 
         {activeTab === "orders" && (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Mes commandes</h2>
-            <p>Contenu à venir...</p>
+            <h2 className="text-xl font-semibold mb-4">
+              {t("profile.tabs.orders")}
+            </h2>
+            <p>{t("profile.content.coming_soon")}</p>
           </div>
         )}
 
         {activeTab === "security" && (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Sécurité</h2>
-            <p>Contenu à venir...</p>
+            <h2 className="text-xl font-semibold mb-4">
+              {t("profile.tabs.security")}
+            </h2>
+            <p>{t("profile.content.coming_soon")}</p>
           </div>
         )}
       </div>

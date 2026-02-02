@@ -262,6 +262,28 @@
     "maxQuantity": "Maximum quantity reached",
     "addToCart": "Add to Cart"
   },
+  "profile": {
+    "title": "My Profile",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "memberSince": "Member since",
+    "tabs": {
+      "info": "Personal Information",
+      "addresses": "My Addresses",
+      "orders": "My Orders",
+      "security": "Security"
+    },
+    "error": {
+      "loading": "Error loading profile"
+    },
+    "info": {
+      "emailCannotBeChanged": "Email cannot be changed"
+    },
+    "content": {
+      "coming_soon": "Content coming soon..."
+    }
+  },
   "user": {
     "firstName": {
       "maxLength": "First name cannot be longer than 50 characters",

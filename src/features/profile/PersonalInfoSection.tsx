@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUpdateUser } from "@/hooks/useUser";
 import type { User } from "@/types/userTypes";
+import { useTranslate } from "@tolgee/react";
 
 interface PersonalInfoSectionProps {
   user: User;
@@ -9,6 +10,7 @@ interface PersonalInfoSectionProps {
 export default function PersonalInfoSection({
   user,
 }: PersonalInfoSectionProps) {
+  const { t } = useTranslate();
   const [isEditing, setIsEditing] = useState(false);
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
@@ -27,7 +29,7 @@ export default function PersonalInfoSection({
       });
       setIsEditing(false);
     } catch (err) {
-      setError("Une erreur est survenue lors de la mise à jour");
+      setError(t("profile.error.loading"));
       console.error(err);
     }
   };
@@ -42,13 +44,13 @@ export default function PersonalInfoSection({
   return (
     <div className="bg-white rounded-lg shadow p-6">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold">Informations personnelles</h2>
+        <h2 className="text-xl font-semibold">{t("profile.tabs.info")}</h2>
         {!isEditing && (
           <button
             onClick={() => setIsEditing(true)}
             className="text-blue-600 hover:text-blue-700 font-medium"
           >
-            Modifier
+            {t("common.edit")}
           </button>
         )}
       </div>
@@ -110,7 +112,7 @@ export default function PersonalInfoSection({
               className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 text-gray-500 cursor-not-allowed"
             />
             <p className="mt-1 text-sm text-gray-500">
-              L'email ne peut pas être modifié
+              {t("profile.info.emailCannotBeChanged")}
             </p>
           </div>
 
@@ -121,8 +123,8 @@ export default function PersonalInfoSection({
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
               {updateUserMutation.isPending
-                ? "Enregistrement..."
-                : "Enregistrer"}
+                ? t("common.saving")
+                : t("common.save")}
             </button>
             <button
               type="button"
@@ -130,7 +132,7 @@ export default function PersonalInfoSection({
               disabled={updateUserMutation.isPending}
               className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 disabled:bg-gray-100 disabled:cursor-not-allowed"
             >
-              Annuler
+              {t("common.cancel")}
             </button>
           </div>
         </form>
@@ -138,28 +140,28 @@ export default function PersonalInfoSection({
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-500 mb-1">
-              Prénom
+              {t("profile.firstName")}
             </label>
             <p className="text-gray-900">{user.firstName}</p>
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-500 mb-1">
-              Nom
+              {t("profile.lastName")}
             </label>
             <p className="text-gray-900">{user.lastName}</p>
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-500 mb-1">
-              Email
+              {t("profile.email")}
             </label>
             <p className="text-gray-900">{user.email}</p>
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-500 mb-1">
-              Membre depuis
+              {t("profile.memberSince")}
             </label>
             <p className="text-gray-900">
               {new Date(user.createdAt).toLocaleDateString("fr-FR", {

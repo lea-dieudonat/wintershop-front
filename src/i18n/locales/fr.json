@@ -262,5 +262,27 @@
     "increaseQuantity": "Augmenter la quantité",
     "maxQuantity": "Quantité maximale atteinte",
     "addToCart": "Ajouter au panier"
+  },
+  "profile": {
+    "title": "Mon profil",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email",
+    "memberSince": "Membre depuis",
+    "tabs": {
+      "info": "Informations personnelles",
+      "addresses": "Mes adresses",
+      "orders": "Mes commandes",
+      "security": "Sécurité"
+    },
+    "error": {
+      "loading": "Erreur lors du chargement du profil"
+    },
+    "info": {
+      "emailCannotBeChanged": "L'email ne peut pas être modifié"
+    },
+    "content": {
+      "coming_soon": "Contenu à venir..."
+    }
   }
 }
