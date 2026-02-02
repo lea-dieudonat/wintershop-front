@@ -11,7 +11,7 @@
 
 WinterShop est une application e-commerce full-stack développée comme **projet portfolio** pour démontrer mes compétences en développement web moderne. L'application permet aux utilisateurs de parcourir un catalogue de produits de sports d'hiver, gérer leur panier, passer des commandes et gérer leur profil utilisateur.
 
-**🔗 Backend Repository:** [wintershop-backend](https://github.com/lea-dieudonat/wintershop-backend)
+**🔗 Backend Repository:** [wintershop-back](https://github.com/lea-dieudonat/wintershop-back)
 
 ## ✨ Fonctionnalités
 
@@ -199,7 +199,7 @@ Cette application communique avec l'API REST Symfony :
 - `GET /api/orders` - Historique des commandes
 - `GET/POST/PUT/DELETE /api/addresses` - CRUD adresses
 
-Voir le [repository backend](https://github.com/lea-dieudonat/wintershop-backend) pour plus de détails.
+Voir le [repository back](https://github.com/lea-dieudonat/wintershop-back) pour plus de détails.
 
 ## 🚀 Déploiement
 
