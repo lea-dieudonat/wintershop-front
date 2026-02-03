@@ -54,13 +54,13 @@ export const AddressSelector = ({
               key={address.id}
               className={`block cursor-pointer transition-all ${
                 selectedAddressId === address.id
-                  ? "ring-2 ring-blue-500"
+                  ? "ring-2 ring-primary-500"
                   : "hover:ring-2 hover:ring-gray-300"
               }`}
             >
               <Card
                 className={`p-4 ${
-                  selectedAddressId === address.id ? "bg-blue-50" : ""
+                  selectedAddressId === address.id ? "bg-primary-50" : ""
                 }`}
               >
                 <div className="flex items-start gap-3">
@@ -70,7 +70,7 @@ export const AddressSelector = ({
                     value={address.id}
                     checked={selectedAddressId === address.id}
                     onChange={() => onSelectAddress(address.id)}
-                    className="mt-1 h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                    className="mt-1 h-4 w-4 text-primary-600 border-gray-300 focus:ring-primary-500"
                   />
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
@@ -78,7 +78,7 @@ export const AddressSelector = ({
                         {address.firstName} {address.lastName}
                       </span>
                       {address.isDefault && (
-                        <span className="px-2 py-0.5 text-xs font-medium bg-blue-100 text-blue-800 rounded">
+                        <span className="px-2 py-0.5 text-xs font-medium bg-primary-100 text-primary-700 rounded">
                           {t("address.default", "Default")}
                         </span>
                       )}

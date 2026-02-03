@@ -203,7 +203,7 @@ export const CheckoutPage = () => {
                 id="sameAsBilling"
                 checked={sameAsBilling}
                 onChange={(e) => handleSameAsBillingChange(e.target.checked)}
-                className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                className="h-4 w-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
               />
               <label
                 htmlFor="sameAsBilling"

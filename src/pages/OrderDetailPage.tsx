@@ -59,7 +59,7 @@ export const OrderDetailPage = () => {
         {/* Header */}
         <div className="mb-6">
           <Link
-            className="text-blue-600 hover:text-blue-800 mb-4 inline-block"
+            className="text-primary-600 hover:text-primary-700 mb-4 inline-block"
             to={ROUTES.ORDERS}
           >
             {t("common.back")}
@@ -105,7 +105,7 @@ export const OrderDetailPage = () => {
                   <p className="font-semibold">
                     {formatPrice(
                       Number(item.unitPrice) * item.quantity,
-                      currentLanguage
+                      currentLanguage,
                     )}
                   </p>
                   <p className="text-sm text-gray-600">

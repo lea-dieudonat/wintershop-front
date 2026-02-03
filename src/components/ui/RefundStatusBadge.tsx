@@ -9,7 +9,7 @@ const getStatusStyles = (status: RefundStatus) => {
     case "requested":
       return "bg-yellow-100 text-yellow-800";
     case "approved":
-      return "bg-blue-100 text-blue-800";
+      return "bg-primary-100 text-primary-700";
     case "rejected":
       return "bg-red-100 text-red-800";
     case "refunded":
@@ -33,7 +33,7 @@ export const RefundStatusBadge = ({ status }: RefundStatusBadgeProps) => {
   return (
     <span
       className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusStyles(
-        status
+        status,
       )}`}
     >
       {getStatusLabel(status)}

@@ -84,8 +84,8 @@ export const CheckoutSummary = ({
       </div>
 
       {/* Payment Info */}
-      <div className="mt-6 p-3 bg-blue-50 rounded-lg">
-        <p className="text-xs text-blue-800">
+      <div className="mt-6 p-3 bg-primary-50 rounded-lg">
+        <p className="text-xs text-primary-700">
           {t(
             "checkout.paymentInfo",
             "You will be redirected to a secure payment gateway to complete your purchase.",

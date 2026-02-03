@@ -15,12 +15,12 @@ export const EmptyCart = () => {
       <p className="text-gray-500 mb-6">
         {t(
           "cart.empty.description",
-          "Browse our products and add items to your cart."
+          "Browse our products and add items to your cart.",
         )}
       </p>
       <Link
         to={ROUTES.PRODUCTS}
-        className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors"
+        className="bg-primary-600 text-white px-6 py-2 rounded-lg shadow hover:bg-primary-700 transition-colors"
       >
         {t("cart.empty.shopNow", "Shop Now")}
       </Link>

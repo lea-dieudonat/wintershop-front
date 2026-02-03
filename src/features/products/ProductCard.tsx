@@ -24,7 +24,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <p className="text-gray-700 mb-4">{description}</p>
 
         <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold text-blue-600">
+          <span className="text-2xl font-bold text-primary-600">
             {formatPrice(product.price, currentLanguage)}
           </span>
           <span className="text-sm text-gray-500">

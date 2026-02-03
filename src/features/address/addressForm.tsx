@@ -63,7 +63,7 @@ export default function AddressForm({
             value={formData.firstName}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
 
@@ -81,7 +81,7 @@ export default function AddressForm({
             value={formData.lastName}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function AddressForm({
           value={formData.street}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
         />
       </div>
 
@@ -120,7 +120,7 @@ export default function AddressForm({
           value={formData.additionalInfo}
           onChange={handleChange}
           placeholder={t("address.additionalInfoPlaceholder")}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
         />
       </div>
 
@@ -140,7 +140,7 @@ export default function AddressForm({
             value={formData.postalCode}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
 
@@ -158,7 +158,7 @@ export default function AddressForm({
             value={formData.city}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
       </div>
@@ -178,7 +178,7 @@ export default function AddressForm({
           value={formData.country}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
         />
       </div>
 
@@ -196,7 +196,7 @@ export default function AddressForm({
           name="phoneNumber"
           value={formData.phoneNumber}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
         />
       </div>
 
@@ -208,7 +208,7 @@ export default function AddressForm({
           name="isDefault"
           checked={formData.isDefault}
           onChange={handleChange}
-          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
         />
         <label htmlFor="isDefault" className="ml-2 text-sm text-gray-700">
           {t("address.isDefault")}
@@ -220,7 +220,7 @@ export default function AddressForm({
         <button
           type="submit"
           disabled={isLoading}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {isLoading ? t("address.saving") : t("address.save")}
         </button>

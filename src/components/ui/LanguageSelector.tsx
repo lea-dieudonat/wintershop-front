@@ -6,7 +6,7 @@ export function LanguageSelector() {
   const currentLanguage = tolgee.getLanguage();
 
   const handleLanguageChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
+    event: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     tolgee.changeLanguage(event.target.value);
   };
@@ -15,7 +15,7 @@ export function LanguageSelector() {
     <select
       value={currentLanguage}
       onChange={handleLanguageChange}
-      className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
       aria-label="{t('languageSelector.label')}"
     >
       {AVAILABLE_LANGUAGES.map((lang) => (

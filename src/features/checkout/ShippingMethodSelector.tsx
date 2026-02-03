@@ -51,13 +51,13 @@ export const ShippingMethodSelector = ({
               key={method.value}
               className={`block cursor-pointer transition-all ${
                 isSelected
-                  ? "ring-2 ring-blue-500"
+                  ? "ring-2 ring-primary-500"
                   : "hover:ring-2 hover:ring-gray-300"
               }`}
             >
               <Card
                 className={`flex items-center p-4 ${
-                  isSelected ? "bg-blue-50" : "bg-white"
+                  isSelected ? "bg-primary-50" : "bg-white"
                 }`}
               >
                 <div className="flex items-start gap-3">
@@ -67,7 +67,7 @@ export const ShippingMethodSelector = ({
                     value={method.value}
                     checked={isSelected}
                     onChange={() => onSelectMethod(method.value)}
-                    className="mt-1 h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                    className="mt-1 h-4 w-4 text-primary-600 border-gray-300 focus:ring-primary-500"
                   />
                   <Icon className="w-6 h-6 text-gray-700 shrink-0" />
                   <div className="flex-1 min-w-0">

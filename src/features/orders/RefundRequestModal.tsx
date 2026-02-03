@@ -19,8 +19,8 @@ export const RefundRequestModal = ({
       setError(
         t(
           "orders.refund.reasonRequired",
-          "Please provide a reason for the refund."
-        )
+          "Please provide a reason for the refund.",
+        ),
       );
       return;
     }
@@ -51,12 +51,12 @@ export const RefundRequestModal = ({
               setReason(e.target.value);
               setError("");
             }}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
             rows={4}
             disabled={isLoading}
             placeholder={t(
               "orders.refund.reasonPlaceholder",
-              "Enter the reason for your refund request..."
+              "Enter the reason for your refund request...",
             )}
           ></textarea>
           {error && <p className="text-red-600 mt-1 text-sm">{error}</p>}
@@ -71,7 +71,7 @@ export const RefundRequestModal = ({
             {t("common.cancel", "Cancel")}
           </button>
           <button
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+            className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 disabled:opacity-50"
             type="submit"
             disabled={isLoading}
           >

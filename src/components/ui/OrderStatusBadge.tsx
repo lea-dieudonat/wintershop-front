@@ -12,7 +12,7 @@ const getStatusStyles = (status: OrderStatus) => {
     case "paid":
       return "bg-emerald-100 text-emerald-800";
     case "confirmed":
-      return "bg-blue-100 text-blue-800";
+      return "bg-primary-100 text-primary-700";
     case "processing":
       return "bg-purple-100 text-purple-800";
     case "shipped":

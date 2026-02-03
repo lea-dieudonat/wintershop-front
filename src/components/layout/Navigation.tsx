@@ -6,6 +6,7 @@ import { LanguageSelector } from "@/components/ui/LanguageSelector";
 import { useState, useEffect, useRef } from "react";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "@/hooks/useCarts";
+import logo from "@/assets/logo.png";
 
 export const Navigation = () => {
   const { isAuthenticated, user, logout } = useAuth();
@@ -35,19 +36,20 @@ export const Navigation = () => {
     };
   }, [isDropdownOpen]);
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="bg-[#0d1425]/95 backdrop-blur-sm border-b border-neutral-800 shadow-sm sticky top-0 z-50 text-white">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
-          <Link to={ROUTES.HOME} className="text-xl font-bold">
-            WinterShop ⛷️
+          <Link to={ROUTES.HOME} className="flex items-center gap-2">
+            <img src={logo} alt="WinterShop Logo" className="h-8 w-8" />
+            <span className="text-xl font-bold">WinterShop</span>
           </Link>
 
           {/* Menu Section */}
           <div className="flex items-center space-x-6">
             <Link
               to={ROUTES.PRODUCTS}
-              className="hover:text-blue-400 transition-colors"
+              className="hover:text-primary-400 transition-colors"
             >
               {t("nav.products")}
             </Link>
@@ -66,7 +68,7 @@ export const Navigation = () => {
                 <div className="relative" ref={dropdownRef}>
                   <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="hover:text-blue-400 transition-colors flex items-center whitespace-nowrap"
+                    className="hover:text-primary-400 transition-colors flex items-center whitespace-nowrap"
                   >
                     {user?.firstName} {user?.lastName} ▼
                   </button>
@@ -111,7 +113,7 @@ export const Navigation = () => {
             ) : (
               <Link
                 to={ROUTES.LOGIN}
-                className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition-colors"
+                className="bg-primary-600 hover:bg-primary-700 px-4 py-2 rounded transition-colors"
               >
                 {t("nav.login")}
               </Link>

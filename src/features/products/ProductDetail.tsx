@@ -76,7 +76,7 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
           </span>
         </div>
         <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
-        <div className="text-3xl font-bold text-blue-600 mb-6">
+        <div className="text-3xl font-bold text-primary-600 mb-6">
           {formatPrice(Number(product.price), "en")}
         </div>
 
@@ -120,7 +120,7 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
                   className="p-2 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label={t(
                     "product.decreaseQuantity",
-                    "Decrease quantity"
+                    "Decrease quantity",
                   )}
                 >
                   <Minus className="w-4 h-4" />
@@ -132,7 +132,7 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
                   className="p-2 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label={t(
                     "product.increaseQuantity",
-                    "Increase quantity"
+                    "Increase quantity",
                   )}
                 >
                   <Plus className="w-4 h-4" />

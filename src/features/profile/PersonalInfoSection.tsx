@@ -46,7 +46,7 @@ export const PersonalInfoSection = ({ user }: PersonalInfoSectionProps) => {
         {!isEditing && (
           <button
             onClick={() => setIsEditing(true)}
-            className="text-blue-600 hover:text-blue-700 font-medium"
+            className="text-primary-600 hover:text-primary-700 font-medium"
           >
             {t("common.edit")}
           </button>
@@ -73,7 +73,7 @@ export const PersonalInfoSection = ({ user }: PersonalInfoSectionProps) => {
               id="firstName"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
               required
               minLength={2}
               maxLength={100}
@@ -92,7 +92,7 @@ export const PersonalInfoSection = ({ user }: PersonalInfoSectionProps) => {
               id="lastName"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
               required
               minLength={2}
               maxLength={100}
@@ -118,7 +118,7 @@ export const PersonalInfoSection = ({ user }: PersonalInfoSectionProps) => {
             <button
               type="submit"
               disabled={updateUserMutation.isPending}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+              className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
               {updateUserMutation.isPending
                 ? t("common.saving")

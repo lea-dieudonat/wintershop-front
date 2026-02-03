@@ -41,13 +41,13 @@ export const OrderCard = ({ order }: OrderCardProps) => {
         </div>
         <div className="flex justify-between items-center">
           <span className="text-gray-700">{t("orders.total")}:</span>
-          <span className="text-xl font-bold text-blue-600">
+          <span className="text-xl font-bold text-primary-600">
             {formatPrice(order.totalAmount, currentLanguage)}
           </span>
         </div>
       </div>
       {/* Indicateur visuel de lien */}
-      <div className="mt-4 pt-4 border-t flex items-center text-blue-600 text-sm">
+      <div className="mt-4 pt-4 border-t flex items-center text-primary-600 text-sm">
         <span>{t("orders.viewDetails")}</span>
         <svg
           className="w-4 h-4 ml-2"

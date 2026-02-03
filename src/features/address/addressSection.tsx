@@ -66,7 +66,7 @@ export const AddressSection = () => {
         {!isAdding && !editingAddress && (
           <button
             onClick={() => setIsAdding(true)}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700"
           >
             {t("address.addNew")}
           </button>
@@ -129,7 +129,7 @@ export const AddressSection = () => {
                           {address.firstName} {address.lastName}
                         </h3>
                         {address.isDefault && (
-                          <span className="px-2 py-0.5 bg-blue-100 text-blue-800 text-xs font-medium rounded">
+                          <span className="px-2 py-0.5 bg-primary-100 text-primary-700 text-xs font-medium rounded">
                             {t("address.default", "Default")}
                           </span>
                         )}
@@ -153,7 +153,7 @@ export const AddressSection = () => {
                     <div className="flex gap-2">
                       <button
                         onClick={() => setEditingAddress(address)}
-                        className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                        className="text-primary-600 hover:text-primary-700 font-medium text-sm"
                       >
                         {t("address.edit")}
                       </button>
