@@ -4,6 +4,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { ROUTES } from "@/router/routes";
 import { useTranslate } from "@tolgee/react";
+import loginBackground from "@/assets/login.avif";
 
 export const LoginPage = () => {
   const { t } = useTranslate();
@@ -34,8 +35,18 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
+    <div
+      className="relative min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${loginBackground})` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-30 -z-10" />
+
+      {/* Login Form Container */}
+      <div
+        className="max-w-md w-full space-y-8 p-8 rounded-lg shadow-2xl"
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.90)" }}
+      >
         {/* Header */}
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
