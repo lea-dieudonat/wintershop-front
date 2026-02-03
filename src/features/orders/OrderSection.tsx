@@ -3,7 +3,7 @@ import { OrderList } from "./OrderList";
 import { useTranslate } from "@tolgee/react";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
-export const OrdersSection = () => {
+export const OrderSection = () => {
   const { t } = useTranslate();
   const { data, isLoading, isError } = useOrders();
 
