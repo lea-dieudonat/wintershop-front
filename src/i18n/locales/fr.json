@@ -194,6 +194,7 @@
   "products": {
     "title": "Liste des produits",
     "noProducts": "Aucun produit disponible",
+    "noProductsDesc": "Reviens bientôt pour découvrir nos nouveautés !",
     "price": "Prix",
     "addToCart": "Ajouter au panier",
     "viewDetails": "Voir les détails",
@@ -283,8 +284,10 @@
   "product": {
     "noImage": "Pas d'image disponible",
     "outOfStock": "Rupture de stock",
-    "lowStock": "Seulement {{stock}} restant en stock !",
-    "inStock": "En stock",
+    "lowStock": "Stocks limités",
+    "onlyXLeft": "Plus que {count} en stock",
+    "inStock": "En stock - Livraison rapide",
+    "addToFavorites": "Ajouter aux favoris",
     "quantity": "Quantité",
     "decreaseQuantity": "Diminuer la quantité",
     "increaseQuantity": "Augmenter la quantité",

@@ -274,6 +274,7 @@
       "snowboards": "Snowboards"
     },
     "noProducts": "No products available",
+    "noProductsDesc": "Come back soon to discover our new products!",
     "price": "Price",
     "title": "Product List",
     "total": "Total Products: {count}",
@@ -282,8 +283,10 @@
   "product": {
     "noImage": "No image available",
     "outOfStock": "Out of Stock",
-    "lowStock": "Only {{stock}} left in stock!",
-    "inStock": "In Stock",
+    "lowStock": "Limited Stock",
+    "onlyXLeft": "Only {count} left in stock",
+    "inStock": "In Stock - Fast Delivery",
+    "addToFavorites": "Add to favorites",
     "quantity": "Quantity",
     "decreaseQuantity": "Decrease quantity",
     "increaseQuantity": "Increase quantity",
