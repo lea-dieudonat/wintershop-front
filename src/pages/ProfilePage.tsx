@@ -6,6 +6,7 @@ import { AddressSection } from "@/features/address/AddressSection";
 import { OrderSection } from "@/features/orders/OrderSection";
 import { useTranslate } from "@tolgee/react";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { SecuritySection } from "@/features/security/SecuritySection";
 
 type TabType = "info" | "addresses" | "orders" | "security";
 
@@ -71,14 +72,7 @@ export const ProfilePage = () => {
 
         {activeTab === "orders" && <OrderSection />}
 
-        {activeTab === "security" && (
-          <div>
-            <h2 className="text-xl font-semibold mb-4">
-              {t("profile.tabs.security")}
-            </h2>
-            <p>{t("profile.content.coming_soon")}</p>
-          </div>
-        )}
+        {activeTab === "security" && <SecuritySection user={user} />}
       </div>
     </div>
   );

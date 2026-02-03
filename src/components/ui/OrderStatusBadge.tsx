@@ -35,7 +35,7 @@ export const OrderStatusBadge = ({ status }: OrderStatusBadgeProps) => {
   return (
     <span
       className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusStyles(
-        status
+        status,
       )}`}
     >
       {t(`orders.status.${status}`)}

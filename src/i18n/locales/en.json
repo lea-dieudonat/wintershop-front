@@ -243,7 +243,6 @@
       "refunded": "Refunded",
       "shipped": "Shipped"
     },
-    "title": "My Orders",
     "total": "Total",
     "viewDetails": "View Details"
   },
@@ -297,7 +296,7 @@
       "emailCannotBeChanged": "Email cannot be changed"
     },
     "content": {
-      "coming_soon": "Content coming soon..."
+      "comingSoon": "Content coming soon..."
     }
   },
   "user": {
@@ -311,5 +310,31 @@
       "minLength": "Last name must be at least 2 characters long",
       "notBlank": "Last name is required"
     }
+  },
+  "password": {
+    "currentRequired": "Current password is required",
+    "newRequired": "New password is required",
+    "minLength": "Password must be at least 8 characters long",
+    "complexity": "Password must contain at least one uppercase letter, one lowercase letter, and one number",
+    "confirmRequired": "Password confirmation is required",
+    "notMatch": "Passwords do not match",
+    "mismatch": "Passwords do not match",
+    "currentIncorrect": "Current password is incorrect",
+    "changeError": "An error occurred while changing the password"
+  },
+  "security": {
+    "title": "Security",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "passwordRequirements": "Minimum 8 characters, with at least one uppercase letter, one lowercase letter, and one number",
+    "changingPassword": "Changing...",
+    "passwordChangedSuccess": "Password changed successfully!",
+    "securityTips": "Security Tips",
+    "useUniquePassword": "Use a unique password",
+    "neverSharePassword": "Never share your password",
+    "changePasswordRegularly": "Change your password regularly",
+    "usePasswordManager": "Use a password manager"
   }
 }

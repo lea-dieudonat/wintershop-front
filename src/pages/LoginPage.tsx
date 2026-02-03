@@ -98,7 +98,7 @@ export const LoginPage = () => {
           <div className="text-sm text-center text-gray-600">
             <p className="mb-2">{t("login.testCredentials")}</p>
             <p className="font-mono bg-gray-100 p-2 rounded">
-              test@wintershop.com / password123
+              test@wintershop.com / Password123
             </p>
           </div>
 

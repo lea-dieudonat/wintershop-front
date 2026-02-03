@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { userApi } from '@/services/api/userApi';
+import { userApi, type ChangePasswordDto } from '@/services/api/userApi';
 import type { UpdateUserDto } from '@/types/userTypes';
 
 export const useUser = (userId: number) => {
@@ -16,6 +16,18 @@ export const useUpdateUser = () => {
   return useMutation({
     mutationFn: ({ userId, data }: { userId: number; data: UpdateUserDto }) =>
       userApi.updateProfile(userId, data),
+    onSuccess: (updatedUser) => {
+      queryClient.setQueryData(['user', updatedUser.id], updatedUser);
+    },
+  });
+};
+
+export const useChangePassword = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ userId, data }: { userId: number; data: ChangePasswordDto }) =>
+      userApi.changePassword(userId, data),
     onSuccess: (updatedUser) => {
       queryClient.setQueryData(['user', updatedUser.id], updatedUser);
     },

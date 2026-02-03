@@ -297,7 +297,33 @@
       "emailCannotBeChanged": "L'email ne peut pas être modifié"
     },
     "content": {
-      "coming_soon": "Contenu à venir..."
+      "comingSoon": "Contenu à venir..."
     }
+  },
+  "password": {
+    "currentRequired": "Le mot de passe actuel est requis",
+    "newRequired": "Le nouveau mot de passe est requis",
+    "minLength": "Le mot de passe doit contenir au moins 8 caractères",
+    "complexity": "Le mot de passe doit contenir au moins une lettre majuscule, une lettre minuscule et un chiffre",
+    "confirmRequired": "La confirmation du mot de passe est requise",
+    "notMatch": "Les mots de passe ne correspondent pas",
+    "mismatch": "Les mots de passe ne correspondent pas",
+    "currentIncorrect": "Le mot de passe actuel est incorrect",
+    "changeError": "Une erreur est survenue lors du changement de mot de passe"
+  },
+  "security": {
+    "title": "Sécurité",
+    "changePassword": "Changer le mot de passe",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "confirmNewPassword": "Confirmer le nouveau mot de passe",
+    "passwordRequirements": "Minimum 8 caractères, avec au moins une majuscule, une minuscule et un chiffre",
+    "changingPassword": "Modification...",
+    "passwordChangedSuccess": "Mot de passe modifié avec succès !",
+    "securityTips": "Conseils de sécurité",
+    "useUniquePassword": "Utilisez un mot de passe unique",
+    "neverSharePassword": "Ne partagez jamais votre mot de passe",
+    "changePasswordRegularly": "Changez régulièrement votre mot de passe",
+    "usePasswordManager": "Utilisez un gestionnaire de mots de passe"
   }
 }
