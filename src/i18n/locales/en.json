@@ -170,6 +170,19 @@
     "title": "Welcome to WinterShop",
     "viewOrders": "View Orders"
   },
+  "hero": {
+    "shopNow": "Shop Now",
+    "previousSlide": "Previous Slide",
+    "nextSlide": "Next Slide",
+    "slide1": {
+      "topBanner": "Sales up to -75%",
+      "mainTitle": "Sales up to -75%",
+      "subtitle": "-10% additional discount",
+      "code": "CODE #SNOW",
+      "validity": "until April 1st 2026",
+      "bottomBanner": "Gear up for the mountains with the best snowboard and ski brands"
+    }
+  },
   "login": {
     "back": "Back to Home",
     "description": "Access your account to manage your orders and settings.",
@@ -321,6 +334,29 @@
     "mismatch": "Passwords do not match",
     "currentIncorrect": "Current password is incorrect",
     "changeError": "An error occurred while changing the password"
+  },
+  "footer": {
+    "aboutDescription": "Your one-stop shop for all winter sports gear and apparel. Quality products for every adventure.",
+    "shop": "Shop",
+    "allProducts": "All Products",
+    "snowboards": "Snowboards",
+    "skis": "Skis",
+    "boots": "Boots",
+    "accessories": "Accessories",
+    "information": "Information",
+    "about": "About",
+    "shippingReturns": "Shipping & Returns",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "sizeGuide": "Size Guide",
+    "newsletter": "Newsletter",
+    "newsletterDescription": "Sign up to receive the latest deals and updates!",
+    "emailPlaceholder": "your@email.com",
+    "subscribe": "Subscribe",
+    "allRightsReserved": "All rights reserved.",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions"
   },
   "security": {
     "title": "Security",

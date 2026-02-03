@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import mountainImage from "@/assets/mountain.jpeg";
+import { useTranslate } from "@tolgee/react";
+import { Link } from "react-router-dom";
+import { ROUTES } from "@/router/routes";
 
 interface Slide {
   id: number;
@@ -13,34 +16,33 @@ interface Slide {
   bottomBanner: string;
 }
 
-const slides: Slide[] = [
-  {
-    id: 1,
-    image: mountainImage,
-    topBanner: "Soldes jusqu'à -75%",
-    mainTitle: "Soldes jusqu'à -75%",
-    subtitle: "-10% de remise supplémentaire",
-    code: "CODE SNOW",
-    validity: "jusqu'au 1er avril 2026",
-    bottomBanner:
-      "Équipez-vous pour la montagne avec les meilleures marques de snowboard et ski",
-  },
-  // Tu peux ajouter d'autres slides ici
-  // {
-  //   id: 2,
-  //   image: '/images/hero-slide-2.jpg',
-  //   topBanner: 'Nouvelle collection',
-  //   mainTitle: 'Équipements 2026',
-  //   subtitle: 'Dernières innovations',
-  //   code: 'NEW2026',
-  //   validity: 'Découvrez maintenant',
-  //   bottomBanner: 'Les nouveautés qui révolutionnent votre ride',
-  // },
-];
-
 export default function HeroSection() {
+  const { t } = useTranslate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const slides: Slide[] = [
+    {
+      id: 1,
+      image: mountainImage,
+      topBanner: t("hero.slide1.topBanner"),
+      mainTitle: t("hero.slide1.mainTitle"),
+      subtitle: t("hero.slide1.subtitle"),
+      code: t("hero.slide1.code"),
+      validity: t("hero.slide1.validity"),
+      bottomBanner: t("hero.slide1.bottomBanner"),
+    },
+    // {
+    //   id: 2,
+    //   image: '/images/hero-slide-2.jpg',
+    //   topBanner: 'Nouvelle collection',
+    //   mainTitle: 'Équipements 2026',
+    //   subtitle: 'Dernières innovations',
+    //   code: 'NEW2026',
+    //   validity: 'Découvrez maintenant',
+    //   bottomBanner: 'Les nouveautés qui révolutionnent votre ride',
+    // },
+  ];
 
   // Auto-play du diaporama
   useEffect(() => {
@@ -48,7 +50,7 @@ export default function HeroSection() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Change toutes les 5 secondes
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
@@ -112,9 +114,12 @@ export default function HeroSection() {
             {slide.validity}
           </p>
 
-          <button className="bg-primary-500 hover:bg-primary-600 text-white font-bold text-lg px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-2xl">
-            J'en profite
-          </button>
+          <Link
+            to={ROUTES.PRODUCTS}
+            className="bg-primary-500 hover:bg-primary-600 text-white font-bold text-lg px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-2xl inline-block"
+          >
+            {t("hero.shopNow", "Shop Now")}
+          </Link>
         </div>
 
         {/* Contrôles du diaporama (si plusieurs slides) */}
@@ -124,7 +129,7 @@ export default function HeroSection() {
             <button
               onClick={goToPrevious}
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-neutral-900/70 hover:bg-neutral-900/90 text-white p-3 rounded-full transition-all z-20 backdrop-blur-sm"
-              aria-label="Slide précédent"
+              aria-label={t("hero.previousSlide", "Previous Slide")}
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -132,7 +137,7 @@ export default function HeroSection() {
             <button
               onClick={goToNext}
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-neutral-900/70 hover:bg-neutral-900/90 text-white p-3 rounded-full transition-all z-20 backdrop-blur-sm"
-              aria-label="Slide suivant"
+              aria-label={t("hero.nextSlide", "Next Slide")}
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -148,7 +153,7 @@ export default function HeroSection() {
                       ? "bg-primary-500 w-8"
                       : "bg-white/50 hover:bg-white/80"
                   }`}
-                  aria-label={`Aller au slide ${index + 1}`}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
             </div>

@@ -170,6 +170,19 @@
       }
     }
   },
+  "hero": {
+    "shopNow": "J'en profite",
+    "previousSlide": "Slide précédent",
+    "nextSlide": "Slide suivant",
+    "slide1": {
+      "topBanner": "Soldes jusqu'à -75%",
+      "mainTitle": "Soldes jusqu'à -75%",
+      "subtitle": "-10% de remise supplémentaire",
+      "code": "CODE #SNOW",
+      "validity": "jusqu'au 1er avril 2026",
+      "bottomBanner": "Équipez-vous pour la montagne avec les meilleures marques de snowboard et ski"
+    }
+  },
   "login": {
     "title": "Connexion à WinterShop",
     "description": "Accédez à votre compte pour gérer vos commandes et paramètres.",
@@ -310,6 +323,29 @@
     "mismatch": "Les mots de passe ne correspondent pas",
     "currentIncorrect": "Le mot de passe actuel est incorrect",
     "changeError": "Une erreur est survenue lors du changement de mot de passe"
+  },
+  "footer": {
+    "aboutDescription": "Votre shop de référence pour l'équipement de snowboard et ski. Du matos de qualité pour riders passionnés.",
+    "shop": "Shop",
+    "allProducts": "Tous les produits",
+    "snowboards": "Snowboards",
+    "skis": "Skis",
+    "boots": "Chaussures",
+    "accessories": "Accessoires",
+    "information": "Informations",
+    "about": "À propos",
+    "shippingReturns": "Livraison & Retours",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "sizeGuide": "Guide des tailles",
+    "newsletter": "Newsletter",
+    "newsletterDescription": "Inscris-toi pour recevoir les dernières promos et nouveautés !",
+    "emailPlaceholder": "ton@email.com",
+    "subscribe": "S'abonner",
+    "allRightsReserved": "Tous droits réservés.",
+    "legalNotice": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsConditions": "Conditions générales"
   },
   "security": {
     "title": "Sécurité",

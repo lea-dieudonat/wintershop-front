@@ -1,5 +1,6 @@
 import { useTranslate } from "@tolgee/react";
 import HeroSection from "@/components/layout/Herosection";
+import Footer from "@/components/layout/Footer";
 
 export const HomePage = () => {
   const { t } = useTranslate();
@@ -40,6 +41,7 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
