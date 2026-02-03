@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useUser } from "../hooks/useUser";
 import { useAuth } from "../hooks/useAuth";
-import PersonalInfoSection from "@/features/profile/PersonalInfoSection";
-import AddressSection from "@/features/address/addressSection";
+import { PersonalInfoSection } from "@/features/profile/PersonalInfoSection";
+import { AddressSection } from "@/features/address/AddressSection";
+import { OrderSection } from "@/features/orders/OrderSection";
 import { useTranslate } from "@tolgee/react";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
@@ -68,14 +69,7 @@ export const ProfilePage = () => {
 
         {activeTab === "addresses" && <AddressSection />}
 
-        {activeTab === "orders" && (
-          <div>
-            <h2 className="text-xl font-semibold mb-4">
-              {t("profile.tabs.orders")}
-            </h2>
-            <p>{t("profile.content.coming_soon")}</p>
-          </div>
-        )}
+        {activeTab === "orders" && <OrderSection />}
 
         {activeTab === "security" && (
           <div>

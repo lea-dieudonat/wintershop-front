@@ -200,6 +200,9 @@
   },
   "orders": {
     "title": "Mes commandes",
+    "error": {
+      "loading": "Une erreur est survenue lors du chargement des commandes."
+    },
     "description": "Consultez vos commandes passées et leurs statuts.",
     "noOrders": "Aucune commande trouvée",
     "noOrdersDescription": "Vous n'avez pas encore passé de commande. Commencez vos achats pour voir vos commandes ici.",

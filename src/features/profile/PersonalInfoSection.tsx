@@ -7,9 +7,7 @@ interface PersonalInfoSectionProps {
   user: User;
 }
 
-export default function PersonalInfoSection({
-  user,
-}: PersonalInfoSectionProps) {
+export const PersonalInfoSection = ({ user }: PersonalInfoSectionProps) => {
   const { t } = useTranslate();
   const [isEditing, setIsEditing] = useState(false);
   const [firstName, setFirstName] = useState(user.firstName);
@@ -68,7 +66,7 @@ export default function PersonalInfoSection({
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              Prénom
+              {t("profile.firstName")}
             </label>
             <input
               type="text"
@@ -87,7 +85,7 @@ export default function PersonalInfoSection({
               htmlFor="lastName"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              Nom
+              {t("profile.lastName")}
             </label>
             <input
               type="text"
@@ -103,7 +101,7 @@ export default function PersonalInfoSection({
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Email
+              {t("profile.email")}
             </label>
             <input
               type="email"
@@ -175,4 +173,4 @@ export default function PersonalInfoSection({
       )}
     </div>
   );
-}
+};

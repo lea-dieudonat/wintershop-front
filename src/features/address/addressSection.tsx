@@ -5,12 +5,12 @@ import {
   useUpdateAddress,
   useDeleteAddress,
 } from "@/hooks/useAddress";
-import AddressForm from "@/features/address/addressForm";
+import AddressForm from "@/features/address/AddressForm";
 import type { Address, AddressInput } from "@/types/addressTypes";
 import { useTranslate } from "@tolgee/react";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
-export default function AddressesSection() {
+export const AddressSection = () => {
   const { t } = useTranslate();
   const [isAdding, setIsAdding] = useState(false);
   const [editingAddress, setEditingAddress] = useState<Address | null>(null);
@@ -174,4 +174,4 @@ export default function AddressesSection() {
       )}
     </div>
   );
-}
+};
