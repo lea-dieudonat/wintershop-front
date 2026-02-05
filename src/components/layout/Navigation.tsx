@@ -56,6 +56,8 @@ export const Navigation = () => {
             <img
               src={logo}
               alt="WinterShop Logo"
+              loading="eager"
+              decoding="async"
               className="h-10 w-10 group-hover:scale-110 transition-transform"
             />
             <span className="text-xl font-black bg-gradient-to-r from-primary-400 to-secondary-500 bg-clip-text text-transparent">

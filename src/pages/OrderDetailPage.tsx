@@ -93,6 +93,8 @@ export const OrderDetailPage = () => {
                 <img
                   src={item.product?.imageUrl || "/placeholder.jpg"}
                   alt={item.product?.name || "Product"}
+                  loading="lazy"
+                  decoding="async"
                   className="w-20 h-20 object-cover rounded mr-4"
                 />
                 <div className="flex-1">

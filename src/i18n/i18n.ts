@@ -16,7 +16,7 @@ const getSavedLanguage = (): string => {
 };
 
 export const tolgee = Tolgee()
-  .use(DevTools())
+  .use(import.meta.env.DEV ? DevTools() : FormatIcu())
   .use(FormatIcu())
   .init({
     language: getSavedLanguage(),

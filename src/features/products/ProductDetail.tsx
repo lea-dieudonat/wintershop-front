@@ -60,6 +60,8 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
           <img
             src={getImageUrl(product.imageUrl)}
             alt={product.name}
+            loading="eager"
+            decoding="async"
             className="w-full h-full object-cover"
           />
         ) : (

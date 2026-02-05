@@ -24,10 +24,13 @@ createRoot(document.getElementById("root")!).render(
               closeButton
               duration={4000}
             />
-            <ReactQueryDevtools initialIsOpen={false} />
+            {/* Only show DevTools in development */}
+            {import.meta.env.DEV && (
+              <ReactQueryDevtools initialIsOpen={false} />
+            )}
           </AuthProvider>
         </TolgeeProvider>
       </QueryClientProvider>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );
