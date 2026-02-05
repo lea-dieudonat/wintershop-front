@@ -3,8 +3,9 @@ import type { ProductDetail, ProductsResponse } from '@/types/productTypes';
 import { PRODUCTS } from '@/lib/apiEndpoints';
 
 export const productsApi = {
-    getAll: async (): Promise<ProductsResponse> => {
-        const { data } = await apiClient.get<ProductsResponse>(PRODUCTS);
+    getAll: async (category?: string): Promise<ProductsResponse> => {
+        const params = category ? { 'category.slug': category } : {};
+        const { data } = await apiClient.get<ProductsResponse>(PRODUCTS, { params });
         return data;
     },
     getById: async (id: string): Promise<ProductDetail> => {

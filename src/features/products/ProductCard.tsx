@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { ShoppingCart, Heart, Zap } from "lucide-react";
 import { useState } from "react";
 import snowboardImage from "@/assets/snowboard.avif";
+import { ROUTES } from "@/router/routes";
+import { useAddToCart } from "@/hooks/useCarts";
 
 interface ProductCardProps {
   product: Product;
@@ -17,9 +19,18 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const currentLanguage = tolgee.getLanguage();
   const { name, description } = getProductTranslation(product, currentLanguage);
   const [isLiked, setIsLiked] = useState(false);
+  const addToCart = useAddToCart();
 
   const isLowStock = product.stock > 0 && product.stock <= 5;
   const isOutOfStock = product.stock === 0;
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    addToCart.mutate({
+      productId: product.id,
+      quantity: 1,
+    });
+  };
 
   return (
     <div className="group relative bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800 hover:border-primary-500 transition-all duration-300 transform hover:-translate-y-1">
@@ -39,7 +50,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
 
       {/* Image */}
       <Link
-        to={`/products/${product.id}`}
+        to={ROUTES.PRODUCT_DETAILS(product.id)}
         className="block relative h-64 bg-neutral-800 overflow-hidden"
       >
         <img
@@ -55,13 +66,13 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         {!isOutOfStock && (
           <button
             className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary-500 hover:bg-primary-600 text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
-            onClick={(e) => {
-              e.preventDefault();
-              // TODO: Ajouter logique du panier
-            }}
+            onClick={handleAddToCart}
+            disabled={addToCart.isPending}
           >
             <ShoppingCart className="w-4 h-4" />
-            {t("product.addToCart", "Ajouter")}
+            {addToCart.isPending
+              ? t("common.loading", "Loading...")
+              : t("product.addToCart", "Ajouter")}
           </button>
         )}
       </Link>
@@ -73,7 +84,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             <p className="text-primary-400 text-xs font-semibold uppercase tracking-wider mb-1">
               {product.category.name}
             </p>
-            <Link to={`/products/${product.id}`}>
+            <Link to={ROUTES.PRODUCT_DETAILS(product.id)}>
               <h3 className="text-white font-bold text-lg hover:text-primary-400 transition-colors line-clamp-2">
                 {name}
               </h3>

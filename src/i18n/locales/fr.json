@@ -155,6 +155,11 @@
     "description": "Votre boutique unique pour tous vos besoins en sports d'hiver. Découvrez notre large gamme de produits et préparez-vous pour votre prochaine aventure !",
     "shopNow": "Acheter maintenant",
     "viewOrders": "Voir les commandes",
+    "featuredProducts": {
+      "title": "Sélection du moment",
+      "subtitle": "Notre équipe de riders a sélectionné pour toi le meilleur matos du marché",
+      "viewAll": "Voir tous les produits"
+    },
     "features": {
       "ski": {
         "title": "Sélection de skis",
@@ -197,6 +202,7 @@
     "noProductsDesc": "Reviens bientôt pour découvrir nos nouveautés !",
     "price": "Prix",
     "addToCart": "Ajouter au panier",
+    "filterBy": "Filtrer par",
     "viewDetails": "Voir les détails",
     "total": "Total des produits : {count}",
     "category": {
@@ -285,6 +291,7 @@
     "noImage": "Pas d'image disponible",
     "outOfStock": "Rupture de stock",
     "lowStock": "Stocks limités",
+    "hot": "HOT",
     "onlyXLeft": "Plus que {count} en stock",
     "inStock": "En stock - Livraison rapide",
     "addToFavorites": "Ajouter aux favoris",

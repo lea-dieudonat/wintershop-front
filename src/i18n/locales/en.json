@@ -166,6 +166,11 @@
         "title": "Winter Gear"
       }
     },
+    "featuredProducts": {
+      "title": "Featured Selection",
+      "subtitle": "Our team of riders has selected the best gear on the market for you",
+      "viewAll": "View All Products"
+    },
     "shopNow": "Shop Now",
     "title": "Welcome to WinterShop",
     "viewOrders": "View Orders"
@@ -273,6 +278,7 @@
       "skis": "Skis",
       "snowboards": "Snowboards"
     },
+    "filterBy": "Filter by",
     "noProducts": "No products available",
     "noProductsDesc": "Come back soon to discover our new products!",
     "price": "Price",
@@ -284,6 +290,7 @@
     "noImage": "No image available",
     "outOfStock": "Out of Stock",
     "lowStock": "Limited Stock",
+    "hot": "HOT",
     "onlyXLeft": "Only {count} left in stock",
     "inStock": "In Stock - Fast Delivery",
     "addToFavorites": "Add to favorites",

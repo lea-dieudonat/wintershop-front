@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { useTranslate } from "@tolgee/react";
+import { ROUTES } from "@/router/routes";
 
 export default function Footer() {
   const { t } = useTranslate();
@@ -61,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/products"
+                  to={ROUTES.PRODUCTS}
                   className="text-neutral-400 hover:text-primary-400 transition-colors text-sm"
                 >
                   {t("footer.allProducts", "All Products")}
@@ -69,7 +70,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/products?category=snowboards"
+                  to={`${ROUTES.PRODUCTS}?category=snowboards`}
                   className="text-neutral-400 hover:text-primary-400 transition-colors text-sm"
                 >
                   {t("footer.snowboards", "Snowboards")}
@@ -77,7 +78,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/products?category=skis"
+                  to={`${ROUTES.PRODUCTS}?category=skis`}
                   className="text-neutral-400 hover:text-primary-400 transition-colors text-sm"
                 >
                   {t("footer.skis", "Skis")}
@@ -85,7 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/products?category=boots"
+                  to={`${ROUTES.PRODUCTS}?category=boots`}
                   className="text-neutral-400 hover:text-primary-400 transition-colors text-sm"
                 >
                   {t("footer.boots", "Boots")}
@@ -93,7 +94,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/products?category=accessories"
+                  to={`${ROUTES.PRODUCTS}?category=accessories`}
                   className="text-neutral-400 hover:text-primary-400 transition-colors text-sm"
                 >
                   {t("footer.accessories", "Accessories")}

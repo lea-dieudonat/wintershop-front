@@ -3,10 +3,10 @@ import { productsApi } from '@/services/api/productsApi';
 
 const PRODUCTS_QUERY_KEY = ['products'];
 
-export const useProducts = () => {
+export const useProducts = (category?: string) => {
     return useQuery({
-        queryKey: PRODUCTS_QUERY_KEY,
-        queryFn: productsApi.getAll,
+        queryKey: [...PRODUCTS_QUERY_KEY, category],
+        queryFn: () => productsApi.getAll(category),
     });
 };
 
