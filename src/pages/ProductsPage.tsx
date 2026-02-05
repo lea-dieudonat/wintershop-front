@@ -3,22 +3,21 @@ import { ErrorMessage } from "@/components/ui/ErrorMessage";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 import { ProductList } from "@/features/products/ProductList";
 import { useProducts } from "@/hooks/useProducts";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { X } from "lucide-react";
-import { ROUTES } from "@/router/routes";
 
 export const ProductsPage = () => {
   const { t } = useTranslate();
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const category = searchParams.get("category") || undefined;
   const { data, isLoading, isError, error } = useProducts(category);
 
   const handleRemoveFilter = () => {
-    navigate(ROUTES.PRODUCTS);
+    setSearchParams({});
   };
 
-  if (isLoading) {
+  // Only show loading spinner on initial load when there's no data
+  if (isLoading && !data) {
     return <LoadingSpinner />;
   }
 

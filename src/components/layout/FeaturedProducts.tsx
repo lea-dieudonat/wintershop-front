@@ -7,9 +7,9 @@ import type { Product } from "@/types/productTypes";
 import { formatPrice } from "@/utils/formatters";
 import { useTranslate, useTolgee } from "@tolgee/react";
 import { getProductTranslation } from "@/utils/translationHelper";
-import snowboardImage from "@/assets/snowboard.avif";
 import { ROUTES } from "@/router/routes";
 import { useAddToCart } from "@/hooks/useCarts";
+import { getImageUrl } from "@/utils/imageHelper";
 
 function ProductCard({ product }: { product: Product }) {
   const [isLiked, setIsLiked] = useState(false);
@@ -52,7 +52,7 @@ function ProductCard({ product }: { product: Product }) {
         className="block relative h-64 bg-neutral-800 overflow-hidden"
       >
         <img
-          src={product.imageUrl || snowboardImage}
+          src={getImageUrl(product.imageUrl)}
           alt={name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />

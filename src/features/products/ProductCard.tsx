@@ -5,9 +5,9 @@ import { useTranslate, useTolgee } from "@tolgee/react";
 import { Link } from "react-router-dom";
 import { ShoppingCart, Heart, Zap } from "lucide-react";
 import { useState } from "react";
-import snowboardImage from "@/assets/snowboard.avif";
 import { ROUTES } from "@/router/routes";
 import { useAddToCart } from "@/hooks/useCarts";
+import { getImageUrl } from "@/utils/imageHelper";
 
 interface ProductCardProps {
   product: Product;
@@ -54,7 +54,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         className="block relative h-64 bg-neutral-800 overflow-hidden"
       >
         <img
-          src={product.imageUrl || snowboardImage}
+          src={getImageUrl(product.imageUrl)}
           alt={name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
