@@ -7,6 +7,7 @@ import { useAddToCart } from "@/hooks/useCarts";
 import { Button } from "@/components/ui/Button";
 import { formatPrice } from "@/utils/formatters";
 import { Card } from "@/components/ui/Card";
+import { getImageUrl } from "@/utils/imageHelper";
 
 interface ProductDetailProps {
   product: ProductDetailType;
@@ -57,7 +58,7 @@ export const ProductDetail = ({ product }: ProductDetailProps) => {
       <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
         {product.imageUrl ? (
           <img
-            src={product.imageUrl}
+            src={getImageUrl(product.imageUrl)}
             alt={product.name}
             className="w-full h-full object-cover"
           />

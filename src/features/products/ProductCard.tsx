@@ -3,11 +3,11 @@ import { getProductTranslation } from "@/utils/translationHelper";
 import type { Product } from "@/types/productTypes";
 import { useTranslate, useTolgee } from "@tolgee/react";
 import { Link } from "react-router-dom";
-import { ShoppingCart, Heart, Zap } from "lucide-react";
-import { useState } from "react";
+import { ShoppingCart, Zap } from "lucide-react";
 import { ROUTES } from "@/router/routes";
 import { useAddToCart } from "@/hooks/useCarts";
 import { getImageUrl } from "@/utils/imageHelper";
+import { WishlistButton } from "@/features/wishlist/WishlistButton";
 
 interface ProductCardProps {
   product: Product;
@@ -18,7 +18,6 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const tolgee = useTolgee(["language"]);
   const currentLanguage = tolgee.getLanguage();
   const { name, description } = getProductTranslation(product, currentLanguage);
-  const [isLiked, setIsLiked] = useState(false);
   const addToCart = useAddToCart();
 
   const isLowStock = product.stock > 0 && product.stock <= 5;
@@ -92,17 +91,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           </div>
 
           {/* Bouton favoris */}
-          <button
-            onClick={() => setIsLiked(!isLiked)}
-            className={`p-2 rounded-full transition-colors ${
-              isLiked
-                ? "text-secondary-500"
-                : "text-neutral-500 hover:text-secondary-400"
-            }`}
-            aria-label={t("product.addToFavorites", "Ajouter aux favoris")}
-          >
-            <Heart className={`w-5 h-5 ${isLiked ? "fill-current" : ""}`} />
-          </button>
+          <WishlistButton productId={product.id} />
         </div>
 
         {/* Description */}

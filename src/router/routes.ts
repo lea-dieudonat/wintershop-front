@@ -15,6 +15,7 @@ export const ROUTES = {
 
     // Panier
     CART: '/cart',
+    WISHLIST: '/wishlist',
     CHECKOUT: CHECKOUT_BASE,
     CHECKOUT_SUCCESS: `${CHECKOUT_BASE}/success`,
     CHECKOUT_CANCEL: `${CHECKOUT_BASE}/cancel`,

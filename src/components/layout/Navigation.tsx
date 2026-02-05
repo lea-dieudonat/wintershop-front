@@ -13,6 +13,7 @@ import {
   Settings,
 } from "lucide-react";
 import { useCart } from "@/hooks/useCarts";
+import { useWishlist } from "@/hooks/useWishlist";
 import logo from "@/assets/logo.png";
 
 export const Navigation = () => {
@@ -21,8 +22,10 @@ export const Navigation = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { data: cart } = useCart();
+  const { data: wishlist } = useWishlist();
   const totalItemsInCart =
     cart?.items?.reduce((sum: number, item) => sum + item.quantity, 0) || 0;
+  const totalItemsInWishlist = wishlist?.length || 0;
 
   // Fermeture du dropdown au clic extérieur
   useEffect(() => {
@@ -102,17 +105,19 @@ export const Navigation = () => {
 
             {isAuthenticated ? (
               <>
-                {/* Wishlist (future) */}
-                <button
+                {/* Wishlist */}
+                <Link
+                  to={ROUTES.WISHLIST}
                   className="relative p-2 text-neutral-300 hover:text-secondary-400 transition-colors"
                   title={t("nav.wishlist", "Liste de souhaits")}
                 >
                   <Heart className="w-6 h-6" />
-                  {/* Badge pour le nombre d'items dans la wishlist */}
-                  {/* <span className="absolute -top-1 -right-1 bg-secondary-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
-                    3
-                  </span> */}
-                </button>
+                  {totalItemsInWishlist > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-secondary-500 text-white text-xs font-bold rounded-full min-w-[20px] h-5 flex items-center justify-center px-1">
+                      {totalItemsInWishlist > 99 ? "99+" : totalItemsInWishlist}
+                    </span>
+                  )}
+                </Link>
 
                 {/* Cart */}
                 <Link

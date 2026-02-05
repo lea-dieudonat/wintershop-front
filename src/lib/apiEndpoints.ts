@@ -4,6 +4,7 @@ const BASE = {
   CART: '/cart',
   PRODUCTS: '/products',
   AUTH: '/auth',
+  WISHLIST: '/wishlist',
 } as const;
 
 export const API_ENDPOINTS = {
@@ -26,6 +27,10 @@ export const API_ENDPOINTS = {
   LOGIN: '/login',
   LOGOUT: '/logout',
   ME: '/me',
+
+  // Wishlist
+  WISHLIST: BASE.WISHLIST,
+  WISHLIST_ITEM: (productId: number | string) => `${BASE.WISHLIST}/${productId}`,
 } as const;
 
 // Optional named exports for cleaner imports
@@ -40,6 +45,9 @@ export const CART_ITEM = API_ENDPOINTS.CART_ITEM;
 
 export const PRODUCTS = API_ENDPOINTS.PRODUCTS;
 export const PRODUCT = API_ENDPOINTS.PRODUCT;
+
+export const WISHLIST = API_ENDPOINTS.WISHLIST;
+export const WISHLIST_ITEM = API_ENDPOINTS.WISHLIST_ITEM;
 
 export const LOGIN = API_ENDPOINTS.LOGIN;
 export const LOGOUT = API_ENDPOINTS.LOGOUT;

@@ -10,6 +10,7 @@ import { CheckoutSuccessPage } from "@/pages/CheckoutSuccessPage";
 import { CheckoutCancelPage } from "@/pages/CheckoutCancelPage";
 import { ProductDetailPage } from "@/pages/ProductDetailPage";
 import { ProfilePage } from "@/pages/ProfilePage";
+import { WishlistPage } from "@/pages/WishlistPage";
 import { ROUTES } from "@/router/routes";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 
@@ -81,6 +82,14 @@ export const AppRouter = () => {
         element={
           <ProtectedRoute>
             <ProfilePage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path={ROUTES.WISHLIST}
+        element={
+          <ProtectedRoute>
+            <WishlistPage />
           </ProtectedRoute>
         }
       />
