@@ -130,6 +130,7 @@
       "placeholder": "Email address"
     },
     "error": "An error occurred",
+    "home": "Home",
     "loading": "Loading...",
     "password": {
       "label": "Password",
@@ -149,6 +150,19 @@
     "notFound": "Resource not found",
     "serverError": "Server error. Please try again later.",
     "unauthorized": "You must be logged in to access this page"
+  },
+  "notFound": {
+    "title": "Oops! Trail Not Found",
+    "description": "Looks like you've gone off-piste! This page doesn't exist or has been moved.",
+    "suggestions": "A few trails to get you back on track:",
+    "suggestion1": "Check the URL in the address bar",
+    "suggestion2": "Use the search bar to find a product",
+    "suggestion3": "Return to the home page",
+    "goBack": "Go Back",
+    "home": "Home",
+    "shop": "Shop",
+    "funFact": "Did you know?",
+    "fact": "Snowboarders travel an average of 25km per day on the slopes!"
   },
   "home": {
     "description": "Your one-stop shop for all your winter sports needs. Explore our wide range of products and gear up for your next adventure!",
@@ -203,7 +217,10 @@
     "logout": "Logout",
     "orders": "My Orders",
     "products": "Products",
-    "profile": "Profile"
+    "profile": "Profile",
+    "wishlist": "Wishlist",
+    "new": "New",
+    "settings": "Settings"
   },
   "orders": {
     "title": "My Orders",
@@ -368,6 +385,17 @@
     "privacyPolicy": "Privacy Policy",
     "termsConditions": "Terms & Conditions"
   },
+  "wishlist": {
+    "error": "Unable to load wishlist",
+    "title": "My Wishlist",
+    "count": "{count} product(s) in your list",
+    "empty": {
+      "subtitle": "Add your favorite products to find them easily",
+      "title": "Your wishlist is empty",
+      "description": "Browse our catalog and add your favorite products!",
+      "cta": "Discover our products"
+    }
+  },
   "security": {
     "title": "Security",
     "changePassword": "Change Password",
@@ -382,5 +410,42 @@
     "neverSharePassword": "Never share your password",
     "changePasswordRegularly": "Change your password regularly",
     "usePasswordManager": "Use a password manager"
+  },
+  "comingSoon": {
+    "featuresPreviewTitle": "Coming soon:",
+    "features": {
+      "intuitiveInterface": "Intuitive and modern interface",
+      "advancedFeatures": "Advanced features",
+      "optimizedUserExperience": "Optimized user experience"
+    },
+    "contactUs": "Got a question? Contact us at"
+  },
+  "about": {
+    "title": "About WinterShop",
+    "description": "Discover soon our story, our values and our passion for winter sports!"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "An intuitive contact form will be available soon. In the meantime, write to us at contact@wintershop.com"
+  },
+  "faq": {
+    "title": "FAQ",
+    "description": "All the answers to your questions will be available here soon!"
+  },
+  "shipping": {
+    "title": "Shipping & Returns",
+    "description": "Detailed information about our delivery and return conditions coming soon!"
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "description": "Complete legal notice will be published soon."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Our data protection policy will be available soon."
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "description": "Our terms and conditions will be available here soon."
   }
 }

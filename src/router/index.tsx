@@ -50,9 +50,34 @@ const WishlistPage = lazy(() =>
   import("@/pages/WishlistPage").then((m) => ({ default: m.WishlistPage })),
 );
 
-// TODO: Créer ces pages plus tard
-// import { RegisterPage } from '../pages/RegisterPage';
-// import { NotFoundPage } from '../pages/NotFoundPage';
+// Lazy load utility and static pages
+const ComingSoonPage = lazy(() =>
+  import("@/pages/ComingSoonPage").then((m) => ({ default: m.ComingSoonPage })),
+);
+const AboutPage = lazy(() =>
+  import("@/pages/ComingSoonPage").then((m) => ({ default: m.AboutPage })),
+);
+const ContactPage = lazy(() =>
+  import("@/pages/ComingSoonPage").then((m) => ({ default: m.ContactPage })),
+);
+const FAQPage = lazy(() =>
+  import("@/pages/ComingSoonPage").then((m) => ({ default: m.FAQPage })),
+);
+const ShippingPage = lazy(() =>
+  import("@/pages/ComingSoonPage").then((m) => ({ default: m.ShippingPage })),
+);
+const LegalPage = lazy(() =>
+  import("@/pages/ComingSoonPage").then((m) => ({ default: m.LegalPage })),
+);
+const PrivacyPage = lazy(() =>
+  import("@/pages/ComingSoonPage").then((m) => ({ default: m.PrivacyPage })),
+);
+const TermsPage = lazy(() =>
+  import("@/pages/ComingSoonPage").then((m) => ({ default: m.TermsPage })),
+);
+const NotFoundPage = lazy(() =>
+  import("@/pages/NotFoundPage").then((m) => ({ default: m.NotFoundPage })),
+);
 
 export const AppRouter = () => {
   return (
@@ -130,11 +155,22 @@ export const AppRouter = () => {
             </ProtectedRoute>
           }
         />
-        {/* Routes à implémenter plus tard */}
+        {/* Routes "Coming Soon" */}
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/shipping" element={<ShippingPage />} />
+        <Route
+          path="/guide"
+          element={<ComingSoonPage featureName="Guide des tailles" />}
+        />
+        {/* Pages légales */}
+        <Route path="/legal" element={<LegalPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
 
-        {/* 
-            <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
-            <Route path="*" element={<NotFoundPage />} /> */}
+        {/* 404 */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>
   );

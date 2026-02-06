@@ -122,6 +122,7 @@
     "error": "Une erreur est survenue",
     "retry": "Réessayer",
     "back": "Retour",
+    "home": "Accueil",
     "backToCart": "Retour au panier",
     "cancel": "Annuler",
     "cancelling": "Annulation en cours...",
@@ -146,9 +147,12 @@
     "products": "Produits",
     "orders": "Mes commandes",
     "cart": "Panier",
+    "wishlist": "Favoris",
     "profile": "Profil",
     "logout": "Déconnexion",
-    "login": "Connexion"
+    "login": "Connexion",
+    "new": "Nouveautés",
+    "settings": "Paramètres"
   },
   "home": {
     "title": "Bienvenue chez WinterShop",
@@ -287,6 +291,19 @@
     "loadProduct": "Impossible de charger le produit.",
     "loadOrders": "Impossible de charger vos commandes"
   },
+  "notFound": {
+    "title": "Oups ! Piste introuvable",
+    "description": "On dirait que tu t'es perdu en hors-piste ! Cette page n'existe pas ou a été déplacée.",
+    "suggestions": "Quelques pistes pour te retrouver :",
+    "suggestion1": "Vérifie l'URL dans la barre d'adresse",
+    "suggestion2": "Utilise la barre de recherche pour trouver un produit",
+    "suggestion3": "Retourne à la page d'accueil",
+    "goBack": "Retour",
+    "home": "Accueil",
+    "shop": "Boutique",
+    "funFact": "Le saviez-vous ?",
+    "fact": "Les snowboarders parcourent en moyenne 25km par jour sur les pistes !"
+  },
   "product": {
     "noImage": "Pas d'image disponible",
     "outOfStock": "Rupture de stock",
@@ -357,6 +374,17 @@
     "privacyPolicy": "Politique de confidentialité",
     "termsConditions": "Conditions générales"
   },
+  "wishlist": {
+    "error": "Impossible de charger la wishlist",
+    "title": "Ma liste de souhaits",
+    "count": "{count} produit(s) dans votre liste",
+    "empty": {
+      "subtitle": "Ajoutez vos produits préférés pour les retrouver facilement",
+      "title": "Votre liste est vide",
+      "description": "Parcourez notre catalogue et ajoutez vos produits favoris !",
+      "cta": "Découvrir nos produits"
+    }
+  },
   "security": {
     "title": "Sécurité",
     "changePassword": "Changer le mot de passe",
@@ -371,5 +399,42 @@
     "neverSharePassword": "Ne partagez jamais votre mot de passe",
     "changePasswordRegularly": "Changez régulièrement votre mot de passe",
     "usePasswordManager": "Utilisez un gestionnaire de mots de passe"
+  },
+  "comingSoon": {
+    "featuresPreviewTitle": "Ce qui arrive bientôt :",
+    "features": {
+      "intuitiveInterface": "Interface intuitive et moderne",
+      "advancedFeatures": "Fonctionnalités avancées",
+      "optimizedUserExperience": "Expérience utilisateur optimisée"
+    },
+    "contactUs": "Une question ? Contactez-nous à"
+  },
+  "about": {
+    "title": "À propos de WinterShop",
+    "description": "Découvrez bientôt notre histoire, nos valeurs et notre passion pour les sports d'hiver !"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Un formulaire de contact intuitif sera bientôt disponible. En attendant, écrivez-nous à contact@wintershop.com"
+  },
+  "faq": {
+    "title": "FAQ",
+    "description": "Toutes les réponses à vos questions seront bientôt disponibles ici !"
+  },
+  "shipping": {
+    "title": "Livraison & Retours",
+    "description": "Informations détaillées sur nos conditions de livraison et de retour à venir !"
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "description": "Les mentions légales complètes seront bientôt publiées."
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "description": "Notre politique de protection des données sera bientôt disponible."
+  },
+  "terms": {
+    "title": "Conditions Générales de Vente",
+    "description": "Nos CGV seront bientôt consultables ici."
   }
 }
