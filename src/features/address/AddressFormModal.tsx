@@ -3,7 +3,7 @@ import { toast } from "sonner";
 import { Modal } from "@/components/ui/Modal";
 import { useCreateAddress } from "@/hooks/useAddress";
 import type { AddressInput } from "@/types/addressTypes";
-import AddressForm from "./AddressForm";
+import { AddressForm } from "./AddressForm";
 
 interface AddressFormModalProps {
   isOpen: boolean;

@@ -9,12 +9,12 @@ interface AddressFormProps {
   isLoading?: boolean;
 }
 
-export default function AddressForm({
+export const AddressForm = ({
   initialData,
   onSubmit,
   onCancel,
   isLoading = false,
-}: AddressFormProps) {
+}: AddressFormProps) => {
   const { t } = useTranslate();
   const [formData, setFormData] = useState<AddressInput>({
     firstName: initialData?.firstName || "",
@@ -237,4 +237,4 @@ export default function AddressForm({
       </div>
     </form>
   );
-}
+};

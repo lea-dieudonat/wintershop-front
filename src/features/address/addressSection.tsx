@@ -5,7 +5,7 @@ import {
   useUpdateAddress,
   useDeleteAddress,
 } from "@/hooks/useAddress";
-import AddressForm from "@/features/address/AddressForm";
+import { AddressForm } from "@/features/address/AddressForm";
 import type { Address, AddressInput } from "@/types/addressTypes";
 import { useTranslate } from "@tolgee/react";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
