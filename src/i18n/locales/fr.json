@@ -198,7 +198,35 @@
     "loggingIn": "Connexion en cours...",
     "login": "Connexion",
     "back": "Retour à l'accueil",
-    "testCredentials": "Identifiants de test :"
+    "testCredentials": "Identifiants de test :",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "registerLink": "Créez-en un"
+  },
+  "register": {
+    "title": "Créez votre compte WinterShop",
+    "description": "Inscrivez-vous pour commencer vos achats et suivre vos commandes.",
+    "firstName": {
+      "label": "Prénom",
+      "placeholder": "Prénom"
+    },
+    "lastName": {
+      "label": "Nom",
+      "placeholder": "Nom"
+    },
+    "confirmPassword": {
+      "label": "Confirmer le mot de passe",
+      "placeholder": "Confirmer le mot de passe"
+    },
+    "submit": "Créer mon compte",
+    "submitting": "Création du compte...",
+    "back": "Retour à l'accueil",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "loginLink": "Se connecter",
+    "error": {
+      "emailExists": "Un compte existe déjà avec cet email.",
+      "passwordMismatch": "Les mots de passe ne correspondent pas.",
+      "generic": "Impossible de créer le compte. Vérifiez vos informations et réessayez."
+    }
   },
   "products": {
     "title": "Liste des produits",

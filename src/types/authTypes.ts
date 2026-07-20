@@ -3,6 +3,13 @@ export interface LoginCredentials {
     password: string;
 }
 
+export interface RegisterCredentials {
+    email: string;
+    password: string;
+    firstName: string;
+    lastName: string;
+}
+
 export interface AuthResponse {
     token: string;
     refresh_token?: string;
@@ -24,12 +31,6 @@ export interface AuthState {
 }
 
 /* TODO: Add additional types as needed
-export interface RegisterCredentials {
-    name: string;
-    email: string;
-    password: string;
-}
-
 export interface PasswordResetRequest {
     email: string;
 }

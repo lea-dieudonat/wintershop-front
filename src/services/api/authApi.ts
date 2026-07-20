@@ -1,11 +1,14 @@
 import { apiClient } from "@/services/api/clientApi";
-import type { LoginCredentials, AuthResponse, User } from "@/types/authTypes";
-import { LOGIN, ME } from "@/lib/apiEndpoints";
+import type { LoginCredentials, RegisterCredentials, AuthResponse, User } from "@/types/authTypes";
+import { LOGIN, ME, REGISTER } from "@/lib/apiEndpoints";
 
 export const authApi = {
     login: async (credentials: LoginCredentials): Promise<AuthResponse> => {
         const response = await apiClient.post<AuthResponse>(LOGIN, credentials);
         return response.data;
+    },
+    register: async (credentials: RegisterCredentials): Promise<void> => {
+        await apiClient.post(REGISTER, credentials);
     },
     getMe: async (): Promise<User> => {
         const response = await apiClient.get<User>(ME);

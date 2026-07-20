@@ -11,6 +11,9 @@ const HomePage = lazy(() =>
 const LoginPage = lazy(() =>
   import("@/pages/LoginPage").then((m) => ({ default: m.LoginPage })),
 );
+const RegisterPage = lazy(() =>
+  import("@/pages/RegisterPage").then((m) => ({ default: m.RegisterPage })),
+);
 const ProductsPage = lazy(() =>
   import("@/pages/ProductsPage").then((m) => ({ default: m.ProductsPage })),
 );
@@ -85,6 +88,7 @@ export const AppRouter = () => {
       <Routes>
         <Route path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.LOGIN} element={<LoginPage />} />
+        <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
         <Route path={ROUTES.PRODUCTS} element={<ProductsPage />} />
         {/* Protected Routes */}
         <Route

@@ -27,6 +27,7 @@ export const API_ENDPOINTS = {
   LOGIN: '/login',
   LOGOUT: '/logout',
   ME: '/me',
+  REGISTER: '/register',
 
   // Wishlist
   WISHLIST: BASE.WISHLIST,
@@ -52,3 +53,4 @@ export const WISHLIST_ITEM = API_ENDPOINTS.WISHLIST_ITEM;
 export const LOGIN = API_ENDPOINTS.LOGIN;
 export const LOGOUT = API_ENDPOINTS.LOGOUT;
 export const ME = API_ENDPOINTS.ME;
+export const REGISTER = API_ENDPOINTS.REGISTER;

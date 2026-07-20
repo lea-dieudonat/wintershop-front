@@ -208,7 +208,35 @@
     "login": "Login",
     "loggingIn": "Logging in...",
     "testCredentials": "Test credentials:",
-    "title": "Login to WinterShop"
+    "title": "Login to WinterShop",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Create one"
+  },
+  "register": {
+    "title": "Create your WinterShop account",
+    "description": "Sign up to start shopping and track your orders.",
+    "firstName": {
+      "label": "First name",
+      "placeholder": "First name"
+    },
+    "lastName": {
+      "label": "Last name",
+      "placeholder": "Last name"
+    },
+    "confirmPassword": {
+      "label": "Confirm password",
+      "placeholder": "Confirm password"
+    },
+    "submit": "Create account",
+    "submitting": "Creating account...",
+    "back": "Back to Home",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Log in",
+    "error": {
+      "emailExists": "An account with this email already exists.",
+      "passwordMismatch": "Passwords do not match.",
+      "generic": "Failed to create account. Please check your details and try again."
+    }
   },
   "nav": {
     "cart": "Cart",

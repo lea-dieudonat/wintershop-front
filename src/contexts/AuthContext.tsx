@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { authApi } from "@/services/api/authApi";
-import type { User, AuthState, LoginCredentials } from "@/types/authTypes";
+import type { User, AuthState, LoginCredentials, RegisterCredentials } from "@/types/authTypes";
 import { AuthContext } from "./Auth";
 
 // Fonction helper pour récupérer l'état initial depuis le localStorage
@@ -51,6 +51,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
+  const register = async (credentials: RegisterCredentials) => {
+    await authApi.register(credentials);
+    await login({ email: credentials.email, password: credentials.password });
+  };
+
   const logout = () => {
     authApi.logout();
     setState({
@@ -62,7 +67,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ ...state, login, logout }}>
+    <AuthContext.Provider value={{ ...state, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );

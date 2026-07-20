@@ -124,6 +124,17 @@ export const LoginPage = () => {
             </button>
           </div>
 
+          {/* Register Link */}
+          <div className="text-center text-sm text-gray-600">
+            {t("login.noAccount")}{" "}
+            <Link
+              to={ROUTES.REGISTER}
+              className="text-indigo-600 hover:text-indigo-500 font-medium"
+            >
+              {t("login.registerLink")}
+            </Link>
+          </div>
+
           {/* Back to Home Link */}
           <div className="text-center">
             <Link
