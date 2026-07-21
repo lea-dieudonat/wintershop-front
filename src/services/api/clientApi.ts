@@ -27,10 +27,14 @@ apiClient.interceptors.response.use(
     (response) => response,
     (error) => {
         if (error.response?.status === 401) {
-            // Handle unauthorized access, e.g., redirect to login page
+            // Clear stale/expired auth state, but don't force-redirect: browsing
+            // public pages (home, product listing) must keep working even if a
+            // background request 401s. Notify AuthContext so isAuthenticated
+            // updates reactively; ProtectedRoute then redirects only when the
+            // user is actually on a protected route.
             localStorage.removeItem('token');
             localStorage.removeItem('user');
-            window.location.href = '/login';
+            window.dispatchEvent(new Event('auth:unauthorized'));
         }
         return Promise.reject(error);
     }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { authApi } from "@/services/api/authApi";
 import type { User, AuthState, LoginCredentials, RegisterCredentials } from "@/types/authTypes";
@@ -65,6 +65,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       token: null,
     });
   };
+
+  useEffect(() => {
+    window.addEventListener("auth:unauthorized", logout);
+    return () => window.removeEventListener("auth:unauthorized", logout);
+  }, []);
 
   return (
     <AuthContext.Provider value={{ ...state, login, register, logout }}>
